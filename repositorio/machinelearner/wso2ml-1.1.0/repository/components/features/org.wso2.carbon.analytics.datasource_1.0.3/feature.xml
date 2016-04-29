@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.analytics.datasource" label="WSO2 Carbon - Analytics Data Source Feature" provider-name="%providerName" version="1.0.3">
+  <description>This feature contains the aggregateFunction data source features</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <includes id="org.wso2.carbon.analytics.datasource.rdbms.server" optional="false" version="1.0.3"/>
+  <includes id="org.wso2.carbon.analytics.datasource.hbase.server" optional="false" version="1.0.3"/>
+  <includes id="org.wso2.carbon.analytics.datasource.cassandra.server" optional="false" version="1.0.3"/>
+</feature>

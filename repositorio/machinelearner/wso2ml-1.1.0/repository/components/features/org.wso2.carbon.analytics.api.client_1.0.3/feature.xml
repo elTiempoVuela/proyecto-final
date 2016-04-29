@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.analytics.api.client" label="WSO2 Carbon - Analytics API Client Feature" provider-name="%providerName" version="1.0.3">
+  <description>This feature contains the aggregateFunction core bundles required for analytics api client functionality</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.analytics.api" unpack="false" version="1.0.3"/>
+  <plugin id="httpclient" unpack="false" version="4.3.1.wso2v2"/>
+  <plugin id="org.wso2.carbon.analytics.io.commons" unpack="false" version="1.0.3"/>
+  <require>
+    <import feature="org.wso2.carbon.analytics.core.server" match="equivalent" version="1.0.3"/>
+    <import feature="org.wso2.carbon.core" match="equivalent" version="4.4.1"/>
+  </require>
+</feature>

@@ -1,0 +1,15 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 ML - Styles Features
+
+
+From: 'WSO2 Inc' (http://wso2.com)
+  - WSO2 ML - Styles (http://wso2.org) org.wso2.ml:org.wso2.ml.styles:bundle:1.1.0
+    License: Apache License Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+

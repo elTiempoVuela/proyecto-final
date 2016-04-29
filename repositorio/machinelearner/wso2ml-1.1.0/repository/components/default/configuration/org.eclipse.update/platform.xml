@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config transient="false" date="1450777690524">
+	<site enabled="true" updateable="true" policy="USER-EXCLUDE" url="platform:/base/">
+		<feature id="org.wso2.carbon.ml.rest.api" url="features/org.wso2.carbon.ml.rest.api_1.1.1/" version="1.1.1">
+		</feature>
+		<feature id="org.wso2.carbon.core.runtime" url="features/org.wso2.carbon.core.runtime_4.4.3/" version="4.4.3">
+		</feature>
+		<feature id="org.wso2.carbon.claim.mgt.ui" url="features/org.wso2.carbon.claim.mgt.ui_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.datasource.reader.cassandra.server" url="features/org.wso2.carbon.datasource.reader.cassandra.server_4.3.1/" version="4.3.1">
+		</feature>
+		<feature id="org.jaggeryjs.modules.uuid" url="features/org.jaggeryjs.modules.uuid_1.0.0/" version="1.0.0">
+		</feature>
+		<feature id="org.wso2.carbon.um.ws.service" url="features/org.wso2.carbon.um.ws.service_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.transaction.manager.server" url="features/org.wso2.carbon.transaction.manager.server_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.ntask.core" url="features/org.wso2.carbon.ntask.core_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.jaggeryjs.modules.carbon" url="features/org.jaggeryjs.modules.carbon_1.0.0/" version="1.0.0">
+		</feature>
+		<feature id="org.wso2.carbon.ntask" url="features/org.wso2.carbon.ntask_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.registry.core" url="features/org.wso2.carbon.registry.core_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.registry.core.common" url="features/org.wso2.carbon.registry.core.common_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.ml" url="features/org.wso2.carbon.ml_1.1.1/" version="1.1.1">
+		</feature>
+		<feature id="org.wso2.carbon.security.mgt.ui" url="features/org.wso2.carbon.security.mgt.ui_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.security.mgt.server" url="features/org.wso2.carbon.security.mgt.server_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.jaggeryjs.modules.process" url="features/org.jaggeryjs.modules.process_1.0.0/" version="1.0.0">
+		</feature>
+		<feature id="org.wso2.carbon.metrics" url="features/org.wso2.carbon.metrics_1.1.0/" version="1.1.0">
+		</feature>
+		<feature id="org.wso2.carbon.registry.core.ui" url="features/org.wso2.carbon.registry.core.ui_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.claim.mgt.server" url="features/org.wso2.carbon.claim.mgt.server_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.event.output.adapter.server" url="features/org.wso2.carbon.event.output.adapter.server_5.0.2/" version="5.0.2">
+		</feature>
+		<feature id="org.wso2.carbon.as.runtimes.cxf" url="features/org.wso2.carbon.as.runtimes.cxf_4.5.2/" version="4.5.2">
+		</feature>
+		<feature id="org.jaggeryjs.modules.handlebars" url="features/org.jaggeryjs.modules.handlebars_1.0.0/" version="1.0.0">
+		</feature>
+		<feature id="org.wso2.carbon.databridge.agent.thrift.server" url="features/org.wso2.carbon.databridge.agent.thrift.server_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.registry.contentsearch" url="features/org.wso2.carbon.registry.contentsearch_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.core.server" url="features/org.wso2.carbon.analytics.core.server_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.wso2.carbon.user.mgt.server" url="features/org.wso2.carbon.user.mgt.server_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.registry.contentsearch.server" url="features/org.wso2.carbon.registry.contentsearch.server_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.logging.mgt.server" url="features/org.wso2.carbon.logging.mgt.server_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.ml.jaggery.app" url="features/org.wso2.carbon.ml.jaggery.app_1.1.1/" version="1.1.1">
+		</feature>
+		<feature id="org.wso2.carbon.um.ws.service.client" url="features/org.wso2.carbon.um.ws.service.client_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.metrics.ui" url="features/org.wso2.carbon.metrics.ui_1.1.0/" version="1.1.0">
+		</feature>
+		<feature id="org.wso2.carbon.webapp.mgt" url="features/org.wso2.carbon.webapp.mgt_4.5.2/" version="4.5.2">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.spark.server" url="features/org.wso2.carbon.analytics.spark.server_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.wso2.carbon.webapp.mgt.ui" url="features/org.wso2.carbon.webapp.mgt.ui_4.5.2/" version="4.5.2">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.datasource.rdbms.server" url="features/org.wso2.carbon.analytics.datasource.rdbms.server_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.datasource.cassandra.server" url="features/org.wso2.carbon.analytics.datasource.cassandra.server_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.wso2.carbon.user.mgt" url="features/org.wso2.carbon.user.mgt_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.jaggeryjs.ui" url="features/org.jaggeryjs.ui_0.11.0/" version="0.11.0">
+		</feature>
+		<feature id="org.wso2.carbon.databridge.commons.server" url="features/org.wso2.carbon.databridge.commons.server_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.jaggeryjs" url="features/org.jaggeryjs_0.11.0/" version="0.11.0">
+		</feature>
+		<feature id="org.wso2.carbon.event.output.adapter.email.server" url="features/org.wso2.carbon.event.output.adapter.email.server_5.0.2/" version="5.0.2">
+		</feature>
+		<feature id="org.wso2.carbon.core.common" url="features/org.wso2.carbon.core.common_4.4.3/" version="4.4.3">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.datasource.hbase.server" url="features/org.wso2.carbon.analytics.datasource.hbase.server_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.jaggeryjs.modules.markdown" url="features/org.jaggeryjs.modules.markdown_1.0.0/" version="1.0.0">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.api.client" url="features/org.wso2.carbon.analytics.api.client_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.wso2.carbon.transaction.manager" url="features/org.wso2.carbon.transaction.manager_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.registry.resource.properties.server" url="features/org.wso2.carbon.registry.resource.properties.server_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.webapp.mgt.server" url="features/org.wso2.carbon.webapp.mgt.server_4.5.2/" version="4.5.2">
+		</feature>
+		<feature id="org.wso2.carbon.event.common" url="features/org.wso2.carbon.event.common_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.um.ws.service.server" url="features/org.wso2.carbon.um.ws.service.server_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.databridge.datapublisher" url="features/org.wso2.carbon.databridge.datapublisher_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.registry.search.ui" url="features/org.wso2.carbon.registry.search.ui_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.analytics.datasource" url="features/org.wso2.carbon.analytics.datasource_1.0.3/" version="1.0.3">
+		</feature>
+		<feature id="org.wso2.carbon.claim.mgt" url="features/org.wso2.carbon.claim.mgt_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.databridge.commons.thrift.server" url="features/org.wso2.carbon.databridge.commons.thrift.server_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.ml.core" url="features/org.wso2.carbon.ml.core_1.1.1/" version="1.1.1">
+		</feature>
+		<feature id="org.jaggeryjs.modules.caramel" url="features/org.jaggeryjs.modules.caramel_1.0.1/" version="1.0.1">
+		</feature>
+		<feature id="org.wso2.carbon.metrics.server" url="features/org.wso2.carbon.metrics.server_1.1.0/" version="1.1.0">
+		</feature>
+		<feature id="org.wso2.carbon.registry.resource.properties" url="features/org.wso2.carbon.registry.resource.properties_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.logging.mgt" url="features/org.wso2.carbon.logging.mgt_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.user.mgt.ui" url="features/org.wso2.carbon.user.mgt.ui_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.ml.styles" url="features/org.wso2.ml.styles_1.1.0/" version="1.1.0">
+		</feature>
+		<feature id="org.wso2.carbon.spark.commons" url="features/org.wso2.carbon.spark.commons_5.0.2/" version="5.0.2">
+		</feature>
+		<feature id="org.wso2.carbon.logging.mgt.ui" url="features/org.wso2.carbon.logging.mgt.ui_4.4.7/" version="4.4.7">
+		</feature>
+		<feature id="org.wso2.carbon.security.mgt" url="features/org.wso2.carbon.security.mgt_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.ml.commons" url="features/org.wso2.carbon.ml.commons_1.1.1/" version="1.1.1">
+		</feature>
+		<feature id="org.wso2.carbon.tenant.deployment" url="features/org.wso2.carbon.tenant.deployment_4.4.3/" version="4.4.3">
+		</feature>
+		<feature id="org.wso2.carbon.identity.core.ui" url="features/org.wso2.carbon.identity.core.ui_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.registry.resource.properties.ui" url="features/org.wso2.carbon.registry.resource.properties.ui_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.jaggeryjs.server" url="features/org.jaggeryjs.server_0.11.0/" version="0.11.0">
+		</feature>
+		<feature id="org.wso2.carbon.core.server" url="features/org.wso2.carbon.core.server_4.4.3/" version="4.4.3">
+		</feature>
+		<feature id="org.wso2.carbon.core" url="features/org.wso2.carbon.core_4.4.3/" version="4.4.3">
+		</feature>
+		<feature id="org.wso2.carbon.core.ui" url="features/org.wso2.carbon.core.ui_4.4.3/" version="4.4.3">
+		</feature>
+		<feature id="org.wso2.carbon.registry.ui.menu" url="features/org.wso2.carbon.registry.ui.menu_4.4.8/" version="4.4.8">
+		</feature>
+		<feature id="org.wso2.carbon.identity.authenticator.saml2.sso.ui" url="features/org.wso2.carbon.identity.authenticator.saml2.sso.ui_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.ml.database" url="features/org.wso2.carbon.ml.database_1.1.1/" version="1.1.1">
+		</feature>
+		<feature id="org.wso2.carbon.datasource.reader.hadoop.server" url="features/org.wso2.carbon.datasource.reader.hadoop.server_4.3.1/" version="4.3.1">
+		</feature>
+		<feature id="org.wso2.carbon.identity.authenticator.saml2.sso.server" url="features/org.wso2.carbon.identity.authenticator.saml2.sso.server_4.5.6/" version="4.5.6">
+		</feature>
+		<feature id="org.wso2.carbon.registry.core.server" url="features/org.wso2.carbon.registry.core.server_4.4.8/" version="4.4.8">
+		</feature>
+	</site>
+</config>

@@ -1,0 +1,299 @@
+TID: [-1234] [] [2016-04-29 14:47:05,932]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,939]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-79-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,941]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,942]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,943]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,944]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,945]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:05,946]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:47:06,230]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  RAM size (MB): 489 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:47:06,231]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:47:06,232]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-04-29 14:47:06,246]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
+TID: [-1] [] [2016-04-29 14:47:06,293]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
+TID: [-1234] [] [2016-04-29 14:47:13,004]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 479ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-04-29 14:47:14,037]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-04-29 14:47:14,966]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
+TID: [-1234] [] [2016-04-29 14:47:14,975]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:47:15,004]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:47:16,786]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1234] [] [2016-04-29 14:50:37,761]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,769]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-79-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,770]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,771]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,772]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,773]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,774]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:37,774]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:50:38,051]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  RAM size (MB): 489 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:50:38,052]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:50:38,052]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-04-29 14:50:38,068]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
+TID: [-1] [] [2016-04-29 14:50:38,109]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
+TID: [-1234] [] [2016-04-29 14:50:47,579]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 171ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-04-29 14:50:47,937]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-04-29 14:50:48,950]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
+TID: [-1234] [] [2016-04-29 14:50:48,958]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:50:48,992]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:50:50,338]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1234] [] [2016-04-29 14:52:18,526]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,535]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-79-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,536]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,537]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,538]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,538]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,540]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,540]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:52:18,829]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  RAM size (MB): 489 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:52:18,830]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:52:18,831]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-04-29 14:52:18,846]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
+TID: [-1] [] [2016-04-29 14:52:18,888]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
+TID: [-1234] [] [2016-04-29 14:52:26,916]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 190ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-04-29 14:52:27,233]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-04-29 14:52:27,450]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
+TID: [-1234] [] [2016-04-29 14:52:27,453]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:52:27,516]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:52:28,693]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1234] [] [2016-04-29 14:54:56,997]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,006]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-79-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,007]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,007]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,009]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,009]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,010]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,012]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 14:54:57,282]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  RAM size (MB): 489 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:54:57,284]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 14:54:57,284]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-04-29 14:54:57,298]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
+TID: [-1] [] [2016-04-29 14:54:57,342]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
+TID: [-1234] [] [2016-04-29 14:55:05,221]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 200ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-04-29 14:55:05,602]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-04-29 14:55:06,823]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
+TID: [-1234] [] [2016-04-29 14:55:06,837]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:55:06,880]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 14:55:08,368]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1234] [] [2016-04-29 15:10:19,775]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,793]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-85-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,794]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,794]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,795]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,796]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,797]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:19,797]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-04-29 15:10:20,096]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-04-29 15:10:20,098]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-04-29 15:10:20,121]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
+TID: [-1] [] [2016-04-29 15:10:20,198]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
+TID: [-1234] [] [2016-04-29 15:10:26,596]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 94ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-04-29 15:10:26,762]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-04-29 15:10:27,061]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
+TID: [-1234] [] [2016-04-29 15:10:27,064]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 15:10:27,084]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-04-29 15:10:27,656]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1] [] [2016-04-29 15:11:05,134]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined {org.apache.catalina.startup.TaglibUriRule}
+TID: [-1234] [] [2016-04-29 15:11:06,669]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled {org.apache.axis2.deployment.ClusterBuilder}
+TID: [-1234] [] [2016-04-29 15:11:07,297]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
+TID: [-1234] [] [2016-04-29 15:11:07,298]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
+TID: [-1234] [] [2016-04-29 15:11:07,727]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v16 - file:/home/ml/wso2ml-1.1.0/repository/deployment/client/modules/addressing-1.6.1-wso2v16.mar {org.apache.axis2.deployment.ModuleDeployer}
+TID: [-1234] [] [2016-04-29 15:11:11,101]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /home/ml/wso2ml-1.1.0/repository/deployment/server/ {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-04-29 15:11:11,204]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig}
+TID: [-1234] [] [2016-04-29 15:11:11,235]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 {org.wso2.carbon.core.internal.permission.update.PermissionUpdater}
+TID: [-1234] [] [2016-04-29 15:11:15,391]  INFO {org.wso2.carbon.ml.core.internal.MLCoreDS} -  H2O Server will start in local mode. {org.wso2.carbon.ml.core.internal.MLCoreDS}
+TID: [-1234] [] [2016-04-29 15:11:16,820]  INFO {org.wso2.carbon.ml.core.impl.H2OServer} -  H2o Server has started. {org.wso2.carbon.ml.core.impl.H2OServer}
+TID: [-1234] [] [2016-04-29 15:11:16,842]  INFO {org.wso2.carbon.ml.core.internal.MLCoreDS} -  ML core bundle activated successfully. {org.wso2.carbon.ml.core.internal.MLCoreDS}
+TID: [-1234] [] [2016-04-29 15:11:16,933]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9443 {org.wso2.carbon.core.transports.http.HttpTransportListener}
+TID: [-1234] [] [2016-04-29 15:11:18,093]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: echo {super-tenant} {org.wso2.carbon.core.deployment.DeploymentInterceptor}
+TID: [-1234] [] [2016-04-29 15:11:18,097]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: Echo.aar - file:/home/ml/wso2ml-1.1.0/repository/deployment/server/axis2services/Echo.aar {org.apache.axis2.deployment.DeploymentEngine}
+TID: [-1234] [] [2016-04-29 15:11:18,258]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: Version {super-tenant} {org.wso2.carbon.core.deployment.DeploymentInterceptor}
+TID: [-1234] [] [2016-04-29 15:11:18,262]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: Version.aar - file:/home/ml/wso2ml-1.1.0/repository/deployment/server/axis2services/Version.aar {org.apache.axis2.deployment.DeploymentEngine}
+TID: [-1234] [] [2016-04-29 15:11:27,173]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started {org.springframework.web.context.ContextLoader}
+TID: [-1234] [] [2016-04-29 15:11:27,396]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Fri Apr 29 15:11:27 UTC 2016]; root of context hierarchy {org.springframework.web.context.support.XmlWebApplicationContext}
+TID: [-1234] [] [2016-04-29 15:11:27,725]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-04-29 15:11:28,061]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-04-29 15:11:28,155]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-04-29 15:11:30,309]  INFO {java.util.prefs.FileSystemPreferences$1} -  Created user preferences directory. {java.util.prefs.FileSystemPreferences$1}
+TID: [-1234] [] [2016-04-29 15:11:30,447]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@28c0177f: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,servicesV11,servicesV10,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy {org.springframework.beans.factory.support.DefaultListableBeanFactory}
+TID: [-1234] [] [2016-04-29 15:11:32,924]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-04-29 15:11:33,211]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /v11 {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-04-29 15:11:33,361]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /v10 {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-04-29 15:11:33,381]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 6206 ms {org.springframework.web.context.ContextLoader}
+TID: [-1234] [] [2016-04-29 15:11:33,456]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api].File[/home/ml/wso2ml-1.1.0/repository/deployment/server/webapps/api.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-04-29 15:11:35,306]  INFO {JAGGERY.js.serverUrl:js} -  WSO2 Machine Learner Console URL : https://172.17.0.2:-1/ml {JAGGERY.js.serverUrl:js}
+TID: [-1234] [] [2016-04-29 15:11:35,317]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ml].File[/home/ml/wso2ml-1.1.0/repository/deployment/server/jaggeryapps/ml] {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer}
+TID: [-1234] [] [2016-04-29 15:11:35,341]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read {org.apache.tomcat.util.net.NioSelectorPool}
+TID: [-1234] [] [2016-04-29 15:11:35,568]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} -  Task service starting in STANDALONE mode... {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl}
+TID: [-1234] [] [2016-04-29 15:11:36,253]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Analytics Indexing Mode: STANDALONE {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+TID: [-1234] [] [2016-04-29 15:11:36,260]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Processing Analytics Indexing Shards {0=6} {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+TID: [-1234] [] [2016-04-29 15:11:36,260]  INFO {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl} -  Data purging is enabled in this node {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl}
+TID: [-1234] [] [2016-04-29 15:11:36,324]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Loading Spark defaults from /home/ml/wso2ml-1.1.0/repository/conf/spark/spark-defaults.conf {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-04-29 15:11:36,645]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Starting SPARK in the LOCAL mode... {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-04-29 15:11:36,772]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi {org.wso2.carbon.core.init.JMXServerManager}
+TID: [-1234] [] [2016-04-29 15:11:36,835]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Machine Learner-1.1.0 {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
+TID: [-1234] [] [2016-04-29 15:11:36,837]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 88 sec {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
+TID: [-1234] [] [2016-04-29 15:11:37,804]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://172.17.0.2:-1/carbon/ {org.wso2.carbon.ui.internal.CarbonUIServiceComponent}
+TID: [-1234] [] [2016-04-29 15:15:24,640]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=1, name=banking, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=banking, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
+TID: [-1234] [] [2016-04-29 15:15:38,831]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=banking, datasetName=banking, datasetId=1, datasetStatus=null, tenantId=-1234, userName=admin, description=banking, createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-04-29 15:15:58,710]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=1, name=analysis, tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
+TID: [-1234] [] [2016-04-29 15:17:28,652]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Created] MLModelNew [id=0, name=analysis.Model.2016-04-29_15-17-28, tenantId=-1234, userName=admin, createdTime=null, analysisId=1, versionSetId=1, storageType=file, storageDirectory=/home/ml/wso2ml-1.1.0/models, status=Not Started, error=null] {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:17:28,739]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Build model [id] 1 job is successfully submitted to Spark. {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:17:28,797] ERROR {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Failed to build the model [id] 1  {org.wso2.carbon.ml.core.impl.MLModelHandler}
+org.wso2.carbon.ml.core.exceptions.MLModelBuilderException: Categorical attribute y cannot be used as the response variable of the Numerical Prediction algorithm: LINEAR_REGRESSION
+	at org.wso2.carbon.ml.core.spark.algorithms.SupervisedSparkModelBuilder.build(SupervisedSparkModelBuilder.java:123)
+	at org.wso2.carbon.ml.core.impl.MLModelHandler$ModelBuilder.run(MLModelHandler.java:1078)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+TID: [-1234] [] [2016-04-29 15:17:45,931]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Deleted] Model [id] 1 {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:18:20,503]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Deleted] [analysis id] 1 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
+TID: [-1234] [] [2016-04-29 15:18:25,325]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=1, name=ana, tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
+TID: [-1] [] [2016-04-29 15:19:11,908]  WARN {com.github.fommil.netlib.BLAS} -  Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS {com.github.fommil.netlib.BLAS}
+TID: [-1] [] [2016-04-29 15:19:11,909]  WARN {com.github.fommil.netlib.BLAS} -  Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS {com.github.fommil.netlib.BLAS}
+TID: [-1234] [] [2016-04-29 15:19:22,073]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Created] MLModelNew [id=0, name=ana.Model.2016-04-29_15-19-22, tenantId=-1234, userName=admin, createdTime=null, analysisId=2, versionSetId=1, storageType=file, storageDirectory=/home/ml/wso2ml-1.1.0/models, status=Not Started, error=null] {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:19:22,178]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Build model [id] 2 job is successfully submitted to Spark. {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:19:47,290]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Successfully built the model [id] 2 in 25.099 seconds. {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:19:47,387]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Successfully persisted the model [id] 2 {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-04-29 15:20:04,934]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 2 finished in 0.057 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-04-29 15:20:39,622]  WARN {org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor} -  Error serializing the response, please check the server logs, response class : ArrayList. {org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor}
+TID: [-1234] [] [2016-04-29 15:22:39,739]  WARN {org.apache.cxf.phase.PhaseInterceptorChain} -  Interceptor for {http://api.rest.ml.carbon.wso2.org/}LoginLogoutApiV10 has thrown exception, unwinding now {org.apache.cxf.phase.PhaseInterceptorChain}
+org.apache.cxf.interceptor.Fault: Could not send Message.
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:64)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:77)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.connector.ClientAbortException: java.net.SocketTimeoutException
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:407)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:480)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:356)
+	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:308)
+	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:108)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination$WrappedOutputStream.close(AbstractHTTPDestination.java:650)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination$BackChannelConduit.close(AbstractHTTPDestination.java:593)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:62)
+	... 40 more
+Caused by: java.net.SocketTimeoutException
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:134)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:174)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:163)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flushBuffer(InternalNioOutputBuffer.java:242)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:213)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:41)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:268)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:119)
+	at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:192)
+	at org.apache.coyote.Response.doWrite(Response.java:499)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:402)
+	... 48 more
+TID: [-1234] [] [2016-04-29 15:23:39,832]  WARN {org.apache.cxf.phase.PhaseInterceptorChain} -  Interceptor for {http://api.rest.ml.carbon.wso2.org/}LoginLogoutApiV10 has thrown exception, unwinding now {org.apache.cxf.phase.PhaseInterceptorChain}
+org.apache.cxf.interceptor.Fault: XML_WRITE_EXC
+	at org.apache.cxf.binding.xml.interceptor.XMLFaultOutInterceptor.handleMessage(XMLFaultOutInterceptor.java:87)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver.onMessage(AbstractFaultChainInitiatorObserver.java:107)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:323)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:77)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.ctc.wstx.exc.WstxIOException: java.net.SocketTimeoutException
+	at com.ctc.wstx.sw.BaseStreamWriter.flush(BaseStreamWriter.java:255)
+	at org.apache.cxf.binding.xml.interceptor.XMLFaultOutInterceptor.handleMessage(XMLFaultOutInterceptor.java:85)
+	... 42 more
+Caused by: org.apache.catalina.connector.ClientAbortException: java.net.SocketTimeoutException
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:407)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:480)
+	at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:366)
+	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:432)
+	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:420)
+	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:91)
+	at org.apache.cxf.io.AbstractWrappedOutputStream.write(AbstractWrappedOutputStream.java:46)
+	at com.ctc.wstx.io.UTF8Writer.flush(UTF8Writer.java:100)
+	at com.ctc.wstx.sw.BufferingXmlWriter.flush(BufferingXmlWriter.java:241)
+	at com.ctc.wstx.sw.BaseStreamWriter.flush(BaseStreamWriter.java:253)
+	... 43 more
+Caused by: java.net.SocketTimeoutException
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:134)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:174)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:163)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flushBuffer(InternalNioOutputBuffer.java:242)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:213)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:41)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:268)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:119)
+	at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:192)
+	at org.apache.coyote.Response.doWrite(Response.java:499)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:402)
+	... 52 more
