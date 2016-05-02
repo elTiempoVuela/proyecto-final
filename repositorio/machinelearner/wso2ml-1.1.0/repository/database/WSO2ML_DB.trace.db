@@ -1,0 +1,12 @@
+05-02 14:01:08 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
+SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
+05-02 14:01:08 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
+SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
+05-02 14:01:23 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
+SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
+05-02 14:01:23 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
+SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
