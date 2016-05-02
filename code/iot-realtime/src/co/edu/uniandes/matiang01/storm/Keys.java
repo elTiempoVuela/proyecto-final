@@ -46,6 +46,10 @@ public class Keys {
 	public static final String MONGO_PET_COLLECTION = "mongodb.pet.collection";
 	
 	
+	public static final String MACHINE_LEARNER_AUTH = "machine.learner.auth";
+	public static final String MACHINE_LEARNER_PREDICT = "machine.learner.predict";
+	
+	
 	public static final String MONGO_BOLT_COUNT = "mongodbbolt.count";
 	
 	

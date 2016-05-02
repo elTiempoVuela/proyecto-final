@@ -33,7 +33,7 @@ public class BoltBuilder {
 		String url = configs.getProperty(Keys.MONGO_PET_URL);
 		String db = configs.getProperty(Keys.MONGO_PET_DATABASE);
 		String collection = configs.getProperty(Keys.MONGO_PET_COLLECTION);
-		return new BoltPersistencia(url, db, collection);
+		return new BoltPersistencia(url, db, collection,configs);
 	}
 	
 	

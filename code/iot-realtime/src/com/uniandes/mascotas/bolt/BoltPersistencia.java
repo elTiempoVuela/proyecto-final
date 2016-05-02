@@ -1,11 +1,15 @@
 package com.uniandes.mascotas.bolt;
 
+import java.util.Properties;
+
 import org.apache.commons.lang.mutable.MutableInt;
 
 import backtype.storm.tuple.Tuple;
+import co.edu.uniandes.matiang01.storm.Keys;
 import co.edu.uniandes.matiang01.storm.bolt.MongodbBolt;
 import co.edu.uniandes.matiang01.utils.IoTUtils;
 import co.edu.uniandes.matiang01.utils.Log;
+import co.edu.uniandes.matiang01.utils.RestUtils;
 
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -13,9 +17,11 @@ import com.mongodb.DBObject;
 
 public class BoltPersistencia extends MongodbBolt {
 	
-
-	public BoltPersistencia(String urlConnection, String db, String collection) {
+	private Properties configs;
+	
+	public BoltPersistencia(String urlConnection, String db, String collection, Properties configs) {
 		super(urlConnection, db, collection);
+		this.configs = configs;
 	}
 
 
@@ -35,6 +41,12 @@ public class BoltPersistencia extends MongodbBolt {
 			String content = (String) tuple.getString(0);
 			Log.info("mensaje: "+content);	
 			content = IoTUtils.getPetData( content,count.toString());
+			
+			String predict = configs.getProperty(Keys.MACHINE_LEARNER_PREDICT);
+			String auth = configs.getProperty(Keys.MACHINE_LEARNER_AUTH);
+			
+			RestUtils.call(predict,"[[\"1\", \"2\", \"2\", \"2\", \"0\"]]",auth);
+			
 			Log.info("mensaje json: "+content);	
 			if(content!= null){
 				DBObject mongoDoc = getMongoDocForInput(content);
