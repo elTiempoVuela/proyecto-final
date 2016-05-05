@@ -2,15 +2,13 @@ package com.uniandes.mascotas.bolt;
 
 import java.util.Properties;
 
-import org.apache.commons.lang.mutable.MutableInt;
-
 import backtype.storm.tuple.Tuple;
 import co.edu.uniandes.matiang01.storm.Keys;
 import co.edu.uniandes.matiang01.storm.bolt.MongodbBolt;
 import co.edu.uniandes.matiang01.utils.IoTUtils;
 import co.edu.uniandes.matiang01.utils.Log;
-import co.edu.uniandes.matiang01.utils.RestUtils;
 
+import com.elibom.client.ElibomRestClient;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
@@ -35,17 +33,24 @@ public class BoltPersistencia extends MongodbBolt {
 
 	@Override
 	public void execute(Tuple tuple) {
-		final String word = tuple.getStringByField("word");
-		final MutableInt count = (MutableInt) tuple.getValueByField("count");
+		final String interes = tuple.getStringByField("interes");
+		final String datos = tuple.getStringByField("datos");
 		
-			String content = (String) tuple.getString(0);
-			Log.info("mensaje: "+content);	
-			content = IoTUtils.getPetData( content,count.toString());
+
+		if (!interes.isEmpty()) {
+			
+		}
+			System.out.println("******************************************************************************************");
+			System.out.println(interes);
+			System.out.println(datos);
+			System.out.println("******************************************************************************************");
+			String content = IoTUtils.getTweet("@jhlopez86",interes,datos);
 			
 			String predict = configs.getProperty(Keys.MACHINE_LEARNER_PREDICT);
 			String auth = configs.getProperty(Keys.MACHINE_LEARNER_AUTH);
 			
-			RestUtils.call(predict,"[[\"1\", \"2\", \"2\", \"2\", \"0\"]]",auth);
+			//String adopta = RestUtils.call(predict,"[[\"1\", \"2\", \"2\", \"2\", \"0\"]]",auth);
+			
 			
 			Log.info("mensaje json: "+content);	
 			if(content!= null){
@@ -55,6 +60,14 @@ public class BoltPersistencia extends MongodbBolt {
 					DB database = mongoClient.getDB(db);
 					DBCollection dbCollection = database.getCollection(collection);
 					dbCollection.insert(mongoDoc);
+					
+					//if(adopta.equals("SI")){
+						ElibomRestClient elibom = new ElibomRestClient("jairo8005@hotmail.com", "LTC6RNXF57");
+						//String deliveryId = elibom.sendMessage("573004183070","adopta un lindo " + interes+ " en la universidad de los Alpes");
+						//System.out.println("deliveryId: " + deliveryId);
+						System.out.println(" SMS enviado OK!");
+					//}
+					
 					collector.ack(tuple);
 				}catch(Exception e) {
 					e.printStackTrace();

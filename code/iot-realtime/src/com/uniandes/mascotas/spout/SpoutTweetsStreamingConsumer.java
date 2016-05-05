@@ -3,6 +3,7 @@ package com.uniandes.mascotas.spout;
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
@@ -27,6 +28,7 @@ public class SpoutTweetsStreamingConsumer extends BaseRichSpout {
 	public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
 		this.collector = collector;
 		this.twitterStream = new TwitterStreamFactory().getInstance();
+                 
                 
                 
                 
@@ -34,10 +36,16 @@ public class SpoutTweetsStreamingConsumer extends BaseRichSpout {
                 this.queue = new LinkedBlockingQueue<Status>();
 		
 		final StatusListener listener = new StatusListener() {
+                    
 
 			@Override
 			public void onStatus(Status status) {
+                            
+                            
+                            
 				queue.offer(status);
+                                
+                                System.out.println("JHLCSTATUS: " + status.getText());
 			}
 
 			@Override
@@ -76,7 +84,12 @@ public class SpoutTweetsStreamingConsumer extends BaseRichSpout {
 
 	@Override
 	public void activate() {
-		twitterStream.sample();
+		//twitterStream.sample();
+            FilterQuery fq = new FilterQuery();
+            long filtros[] = {887214643,17813487,76025758,174343762,915973567};
+            fq.follow(filtros);
+            twitterStream.filter(fq);
+               
                 
                 
                 

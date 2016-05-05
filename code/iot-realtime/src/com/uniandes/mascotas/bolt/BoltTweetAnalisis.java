@@ -16,7 +16,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 
-public class BoltTweetSplitter extends BaseRichBolt {
+public class BoltTweetAnalisis extends BaseRichBolt {
 
 	private OutputCollector collector = null;
 
@@ -28,7 +28,19 @@ public class BoltTweetSplitter extends BaseRichBolt {
 	@Override
 	public void execute(Tuple tuple) {
 		final Status tweet = (Status) tuple.getValueByField("status");
-		final String[] words = tweet.getText().split(" ");
+                String interes="";
+		String tuit = tweet.getText();
+                String usuario = tweet.getUser().getScreenName();
+                if(tuit.indexOf("perro")>=0 || tuit.indexOf("perrito")>=0 || tuit.indexOf("cachorro")>=0 || tuit.indexOf("cachorrito")>=0){
+                    interes="perro";
+                } else if(tuit.indexOf("gato")>=0 || tuit.indexOf("gatito")>=0 || tuit.indexOf("minino")>=0 || tuit.indexOf("gatico")>=0){
+                    interes = "gato";
+                } else if(tuit.indexOf("animal")>=0 || tuit.indexOf("mascota")>=0 || tuit.indexOf("mejor amigo del hombre")>=0 || tuit.indexOf("adopta")>=0){
+                    interes = "indiferente";
+                } else{
+                    interes = "";
+                }
+                //final String[] words = tweet.getText().split(" ");
                 
                 //////
                 //if(tweet.getPlace()!=null){
@@ -45,18 +57,19 @@ public class BoltTweetSplitter extends BaseRichBolt {
                 document.put("usuario", "'" + tweet.getUser().getScreenName() + "'");
                // document.put("pais", tweet.getPlace().getCountry());
                 tabla.insert(document);*/
-                System.out.println(tweet.getText());
+                System.out.println("JHLC: " + tweet.getText());
                 
                 //}
                 ///////
 
-		for (String word : words) {
-			collector.emit(new Values(word));
-		}
+		//for (String word : words) {
+		//	collector.emit(new Values(word));
+		//}
+                collector.emit(new Values(interes));
 	}
 
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
-		declarer.declare(new Fields("word"));
+		declarer.declare(new Fields("interes"));
 	}
 }

@@ -23,7 +23,34 @@
 	
 4. Configurar máquinas
 	
-	docker exec -it ml bash
+	Configurar storm
+	
+		docker exec -it kafka bash
+	 
+		cd /home/kafka/zookeeper-3.3.6
+			
+		bin/zkServer.sh start conf/zoo.cfg 
+		
+		#cd /home/kafka/kafka_2.9.2-0.8.2.2
+		
+		#bin/kafka-server-start.sh config/server.properties &
+		
+		#bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic iotdogs
+		
+		cd /home/kafka/apache-storm-0.10.0/
+	
+		bin/storm nimbus &
+		
+		bin/storm supervisor &
+		
+		cd /home/kafka/standalone/
+		
+		java -jar iot-framework.jar --storm twitter default_config.properties
+
+	
+	Configurar storm	
+
+		docker exec -it ml bash
 
 	exit
 

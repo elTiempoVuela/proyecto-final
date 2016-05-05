@@ -13,32 +13,30 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 
-public class BoltContador extends BaseRichBolt {
+public class BoltDataBuild extends BaseRichBolt {
 
 	private OutputCollector collector = null;
-	private Map<String, MutableInt> words = null;
+	//private Map<String, MutableInt> words = null;
+        private String interes=null;
 
 	@Override
 	public void prepare(Map conf, TopologyContext context, OutputCollector collector) {
 		this.collector = collector;
-		this.words = new HashMap<String, MutableInt>();
+		//this.words = new HashMap<String, MutableInt>();
+                this.interes="";
 	}
 
 	@Override
 	public void execute(Tuple input) {
-		final String word = input.getStringByField("word");
-		MutableInt count = words.get(word);
-		if (count == null) {
-			count = new MutableInt();
-		}
-		count.increment();
+		final String word = input.getStringByField("interes");
+		
 
-		words.put(word, count);
-		collector.emit(new Values(word, count));
+		interes=word;
+		collector.emit(new Values(interes,"femenino,bogota,soltero,0,bachillerato,2"));
 	}
 
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
-		declarer.declare(new Fields("word", "count"));
+		declarer.declare(new Fields("interes", "datos"));
 	}
 }
