@@ -1,6 +1,8 @@
 package co.edu.uniandes.matiang01.utils;
 
 import co.edu.uniandes.matiang01.iot.TemperatureSensor;
+import co.edu.uniandes.matiang01.iot.model.Message;
+import co.edu.uniandes.matiang01.iot.model.Notify;
 import co.edu.uniandes.matiang01.iot.model.Pet;
 import co.edu.uniandes.matiang01.iot.model.Tweet;
 
@@ -38,6 +40,15 @@ public class IoTUtils {
 	public static String getTweet(String cuenta, String interes, String datos) {
 		Tweet t = null;
 		t = new Tweet(cuenta,interes,datos);
+		return GSonUtils.serialize(t);
+	}
+
+
+
+	public static String getNotify(String event, String usuario, String interes, String msg) {
+		Notify t = null;
+		Message m = new Message(usuario,interes,msg);
+		t = new Notify(event,m);
 		return GSonUtils.serialize(t);
 	}
 

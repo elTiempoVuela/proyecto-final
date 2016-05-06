@@ -23,29 +23,26 @@ public class SpoutTweetsStreamingConsumer extends BaseRichSpout {
 	private SpoutOutputCollector collector;
 	private LinkedBlockingQueue<Status> queue;
 	private TwitterStream twitterStream;
+	private String [] accounts;
+	
+	public SpoutTweetsStreamingConsumer (String [] accounts){
+		this.accounts = accounts;
+	}
 	
 	@Override
 	public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
 		this.collector = collector;
 		this.twitterStream = new TwitterStreamFactory().getInstance();
                  
-                
-                
-                
-                
-                this.queue = new LinkedBlockingQueue<Status>();
+        this.queue = new LinkedBlockingQueue<Status>();
 		
 		final StatusListener listener = new StatusListener() {
                     
 
 			@Override
 			public void onStatus(Status status) {
-                            
-                            
-                            
 				queue.offer(status);
-                                
-                                System.out.println("JHLCSTATUS: " + status.getText());
+                System.out.println("JHLCSTATUS: " + status.getText());
 			}
 
 			@Override
@@ -86,14 +83,9 @@ public class SpoutTweetsStreamingConsumer extends BaseRichSpout {
 	public void activate() {
 		//twitterStream.sample();
             FilterQuery fq = new FilterQuery();
-            long filtros[] = {887214643,17813487,76025758,174343762,915973567};
+            long filtros[] = SpoutTweetsStreamingConsumer.toLong(accounts);
             fq.follow(filtros);
             twitterStream.filter(fq);
-               
-                
-                
-                
-                
 	};
 	
 	@Override
@@ -111,4 +103,13 @@ public class SpoutTweetsStreamingConsumer extends BaseRichSpout {
 		declarer.declare(new Fields("status"));
 	}
 
+	public static long[] toLong(String[] intArray) {
+
+		long[] result = new long[intArray.length];
+		for (int i = 0; i < intArray.length; i++) {
+			result[i] = Long.valueOf(intArray[i]);
+			System.out.println(result[i]);
+		}
+		return result;
+	}
 }

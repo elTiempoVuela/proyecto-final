@@ -33,7 +33,12 @@ public class RestUtils {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return resp;
+		return resp.replace("[", "").replace("]", "");
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println(Double.valueOf(call("http://localhost:9443/api/models/6/predict?percentile=98","[[34,1,1,1]]","Basic YWRtaW46YWRtaW4=")).doubleValue() > 0.5D);
 	}
 }
 

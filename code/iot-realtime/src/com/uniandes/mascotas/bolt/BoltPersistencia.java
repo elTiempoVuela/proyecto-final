@@ -7,6 +7,7 @@ import co.edu.uniandes.matiang01.storm.Keys;
 import co.edu.uniandes.matiang01.storm.bolt.MongodbBolt;
 import co.edu.uniandes.matiang01.utils.IoTUtils;
 import co.edu.uniandes.matiang01.utils.Log;
+import co.edu.uniandes.matiang01.utils.RestUtils;
 
 import com.elibom.client.ElibomRestClient;
 import com.mongodb.DB;
@@ -16,10 +17,17 @@ import com.mongodb.DBObject;
 public class BoltPersistencia extends MongodbBolt {
 	
 	private Properties configs;
+	private static final String INTERES = "[INTERES]";
+	private String text="";
+	private String movil="";
+	private boolean smsEnabled = false;
 	
 	public BoltPersistencia(String urlConnection, String db, String collection, Properties configs) {
 		super(urlConnection, db, collection);
 		this.configs = configs;
+		this.text = configs.getProperty(Keys.MESSAGE_TEXT);
+		this.movil = configs.getProperty(Keys.MESSAGE_NUMBER);
+		this.smsEnabled = Boolean.valueOf(configs.getProperty(Keys.MESSAGE_ENABLED));
 	}
 
 
@@ -34,45 +42,58 @@ public class BoltPersistencia extends MongodbBolt {
 	@Override
 	public void execute(Tuple tuple) {
 		final String interes = tuple.getStringByField("interes");
-		final String datos = tuple.getStringByField("datos");
+		final String tweet = tuple.getStringByField("tweet");
+		final String usuario = tuple.getStringByField("usuario");
 		
 
 		if (!interes.isEmpty()) {
 			
-		}
-			System.out.println("******************************************************************************************");
-			System.out.println(interes);
-			System.out.println(datos);
-			System.out.println("******************************************************************************************");
-			String content = IoTUtils.getTweet("@jhlopez86",interes,datos);
-			
-			String predict = configs.getProperty(Keys.MACHINE_LEARNER_PREDICT);
-			String auth = configs.getProperty(Keys.MACHINE_LEARNER_AUTH);
-			
-			//String adopta = RestUtils.call(predict,"[[\"1\", \"2\", \"2\", \"2\", \"0\"]]",auth);
-			
-			
-			Log.info("mensaje json: "+content);	
-			if(content!= null){
-				DBObject mongoDoc = getMongoDocForInput(content);
-	
-				try{
-					DB database = mongoClient.getDB(db);
-					DBCollection dbCollection = database.getCollection(collection);
-					dbCollection.insert(mongoDoc);
+				String content = IoTUtils.getTweet(usuario,interes,tweet);
+				
+				String predict = configs.getProperty(Keys.MACHINE_LEARNER_PREDICT);
+				String auth = configs.getProperty(Keys.MACHINE_LEARNER_AUTH);
+				String input = configs.getProperty(Keys.MACHINE_LEARNER_INPUT);
+				
+				String collectionNotify = configs.getProperty(Keys.MONGO_PET_COLLECTION_EVENTS);
+				String topic = configs.getProperty(Keys.EVENTS_TOPIC);
+				
+				String adopta = RestUtils.call(predict,input,auth);
+				
+				
+				Log.info("mensaje json: "+content);	
+				if(content!= null){
+					DBObject mongoDoc = getMongoDocForInput(content);
 					
-					//if(adopta.equals("SI")){
-						ElibomRestClient elibom = new ElibomRestClient("jairo8005@hotmail.com", "LTC6RNXF57");
-						//String deliveryId = elibom.sendMessage("573004183070","adopta un lindo " + interes+ " en la universidad de los Alpes");
-						//System.out.println("deliveryId: " + deliveryId);
-						System.out.println(" SMS enviado OK!");
-					//}
-					
-					collector.ack(tuple);
-				}catch(Exception e) {
-					e.printStackTrace();
-					collector.fail(tuple);
-				}		
+		
+					try{
+						DB database = mongoClient.getDB(db);
+						DBCollection dbCollection = database.getCollection(collection);
+						dbCollection.insert(mongoDoc);
+
+						String msg = this.text.replace(INTERES, interes);
+						
+						String contentNotify = IoTUtils.getNotify(topic,usuario,interes,msg);
+						DBObject mongoDocNofify = getMongoDocForInput(contentNotify);
+						DBCollection dbCollectionNotify = database.getCollection(collectionNotify);
+						dbCollectionNotify.insert(mongoDocNofify);
+						
+						if(Double.valueOf(adopta).doubleValue() > 0.5D){
+							ElibomRestClient elibom = new ElibomRestClient("jairo8005@hotmail.com", "LTC6RNXF57");
+							
+							String deliveryId ="N/A";
+							if(this.smsEnabled){
+								deliveryId = elibom.sendMessage(movil,msg);
+								System.out.println(" SMS enviado OK!");
+							}
+							System.out.println("deliveryId: " + deliveryId);
+						}
+						
+						collector.ack(tuple);
+					}catch(Exception e) {
+						e.printStackTrace();
+						collector.fail(tuple);
+					}		
+				}
 			}
 		
 		}

@@ -4177,3 +4177,36 @@ Caused by: java.io.IOException: Protocol error
 	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
 	at org.h2.store.FileStore.write(FileStore.java:336)
 	... 30 more
+05-06 03:12:13 database: close
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:154)
+	at org.h2.store.PageLog.checkpoint(PageLog.java:643)
+	at org.h2.store.PageStore.checkpoint(PageStore.java:373)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1124)
+	at org.h2.engine.Database.close(Database.java:1077)
+	at org.h2.engine.Database.removeSession(Database.java:959)
+	at org.h2.engine.Session.close(Session.java:579)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:317)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 22 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 19 more

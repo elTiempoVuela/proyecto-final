@@ -48,9 +48,11 @@
 		java -jar iot-framework.jar --storm twitter default_config.properties
 
 	
-	Configurar storm	
+	Configurar machinelearner	
 
 		docker exec -it ml bash
+		
+		bin/wso2server.sh
 
 	exit
 
