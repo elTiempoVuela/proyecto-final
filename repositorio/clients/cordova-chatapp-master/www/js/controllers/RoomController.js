@@ -35,7 +35,7 @@
 			var msg = {
 				'room': me.current_room,
 				'user': current_user,
-				'text': me.message + JSON.stringify(SocketService),
+				'text': me.message,
 				'time': moment()
 			};
 
@@ -46,10 +46,6 @@
 			me.message = '';
 			
 			SocketService.emit('send:message', msg);
-			
-			SocketService.on ('connection', function (data) {
-			  console.log(data);
-			});
 		};
 
 

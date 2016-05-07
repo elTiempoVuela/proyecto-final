@@ -10,6 +10,31 @@
 		me.rooms = ['mascotas', 'Art', 'Writing', 'Travel', 'Business', 'Photography'];
 		
 
+		
+		try {
+			
+			me.status = SocketService;
+			SocketService.on('connect', function () {
+			
+				me.status = me.status + 'connected';
+				console.log(me.status);	
+			});
+			
+			SocketService.on('disconnect', function () {
+				me.status = me.status + 'disconnect';
+				console.log(me.status);	
+			});
+				
+		}
+		catch(err) {
+			console.log(err);
+			me.status = err.message;
+		}
+
+
+		
+		
+		
 		$scope.login = function(username){
 			me.username = username;
 			localStorageService.set('username', 'advertising');
