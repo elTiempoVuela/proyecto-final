@@ -1,5 +1,6 @@
 package co.edu.uniandes.matiang01.storm;
 
+
 /**
  * @author vishnu viswanath
  * This is an utility class. It contains the keys that should be present in the input config-file
@@ -44,11 +45,20 @@ public class Keys {
 	public static final String MONGO_PET_URL = "mongodb.pet.url";
 	public static final String MONGO_PET_DATABASE = "mongodb.pet.database";
 	public static final String MONGO_PET_COLLECTION = "mongodb.pet.collection";
-	
+	public static final String MONGO_PET_COLLECTION_EVENTS = "mongodb.pet.collection.events";
+	public static final String EVENTS_TOPIC = "events.topic";
 	
 	public static final String MACHINE_LEARNER_AUTH = "machine.learner.auth";
 	public static final String MACHINE_LEARNER_PREDICT = "machine.learner.predict";
+	public static final String MACHINE_LEARNER_INPUT = "machine.learner.input";
 	
+	public static final String TWEET_WORDS = "tweet.words";
+	public static final String TWEET_ACCOUNTS = "tweet.accounts";
+	
+	public static final String MESSAGE_TEXT = "message.text";
+	public static final String MESSAGE_NUMBER = "message.number";
+	public static final String MESSAGE_ENABLED = "message.enabled";
+
 	
 	public static final String MONGO_BOLT_COUNT = "mongodbbolt.count";
 	
@@ -56,6 +66,7 @@ public class Keys {
 	//bridge
 	public static final String BRIDGE_MOSQUITTO = "bridge.mosquitto";
 	public static final String BRIDGE_ZOOKEEPER = "bridge.zookeeper";
+
 	
 	
 }

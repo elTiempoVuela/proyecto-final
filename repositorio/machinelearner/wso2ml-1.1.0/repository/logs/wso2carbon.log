@@ -1,737 +1,528 @@
-TID: [-1] [] [2016-05-02 13:54:38,386] ERROR {org.wso2.carbon.metrics.reporter.JDBCReporter} -  Error when reporting gauges {org.wso2.carbon.metrics.reporter.JDBCReporter}
-org.h2.jdbc.JdbcBatchUpdateException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1098)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
-	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
-	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+TID: [-1234] [] [2016-05-06 03:17:44,318]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=mascotas, datasetName=mascotas, datasetId=5, datasetStatus=null, tenantId=-1234, userName=admin, description=mascotas, createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:18:24,400]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=mm, datasetName=mascotas, datasetId=5, datasetStatus=null, tenantId=-1234, userName=admin, description=mm, createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:21:31,000]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,046]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-85-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,047]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,049]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,050]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,052]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,053]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,056]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-06 03:21:31,606]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1234] [] [2016-05-06 03:21:31,607]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-05-06 03:21:31,651]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
+TID: [-1] [] [2016-05-06 03:21:31,834]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
+TID: [-1234] [] [2016-05-06 03:21:41,129]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 311ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-05-06 03:21:41,700]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-05-06 03:21:43,830]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
+TID: [-1234] [] [2016-05-06 03:21:43,839]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-05-06 03:21:43,872]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-05-06 03:21:45,237]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1] [] [2016-05-06 03:23:26,612]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined {org.apache.catalina.startup.TaglibUriRule}
+TID: [-1234] [] [2016-05-06 03:23:30,966]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled {org.apache.axis2.deployment.ClusterBuilder}
+TID: [-1234] [] [2016-05-06 03:23:32,065]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
+TID: [-1234] [] [2016-05-06 03:23:32,067]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
+TID: [-1234] [] [2016-05-06 03:23:32,300]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  No services directory was found under /home/ml/wso2ml-1.1.0/repository/deployment/client. {org.apache.axis2.deployment.DeploymentEngine}
+TID: [-1234] [] [2016-05-06 03:23:32,619]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v16 - file:/home/ml/wso2ml-1.1.0/repository/deployment/client/modules/addressing-1.6.1-wso2v16.mar {org.apache.axis2.deployment.ModuleDeployer}
+TID: [-1234] [] [2016-05-06 03:23:39,898]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /home/ml/wso2ml-1.1.0/repository/deployment/server/ {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-06 03:23:40,047]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig}
+TID: [-1234] [] [2016-05-06 03:23:40,083]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 {org.wso2.carbon.core.internal.permission.update.PermissionUpdater}
+TID: [-1234] [] [2016-05-06 03:23:49,429]  INFO {org.wso2.carbon.ml.core.internal.MLCoreDS} -  H2O Server will start in local mode. {org.wso2.carbon.ml.core.internal.MLCoreDS}
+TID: [-1234] [] [2016-05-06 03:23:52,855]  INFO {org.wso2.carbon.ml.core.impl.H2OServer} -  H2o Server has started. {org.wso2.carbon.ml.core.impl.H2OServer}
+TID: [-1234] [] [2016-05-06 03:23:52,897]  INFO {org.wso2.carbon.ml.core.internal.MLCoreDS} -  ML core bundle activated successfully. {org.wso2.carbon.ml.core.internal.MLCoreDS}
+TID: [-1234] [] [2016-05-06 03:23:53,060]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9443 {org.wso2.carbon.core.transports.http.HttpTransportListener}
+TID: [-1234] [] [2016-05-06 03:23:57,500]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: echo {super-tenant} {org.wso2.carbon.core.deployment.DeploymentInterceptor}
+TID: [-1234] [] [2016-05-06 03:23:57,516]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: Echo.aar - file:/home/ml/wso2ml-1.1.0/repository/deployment/server/axis2services/Echo.aar {org.apache.axis2.deployment.DeploymentEngine}
+TID: [-1234] [] [2016-05-06 03:23:57,928]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: Version {super-tenant} {org.wso2.carbon.core.deployment.DeploymentInterceptor}
+TID: [-1234] [] [2016-05-06 03:23:57,938]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: Version.aar - file:/home/ml/wso2ml-1.1.0/repository/deployment/server/axis2services/Version.aar {org.apache.axis2.deployment.DeploymentEngine}
+TID: [-1234] [] [2016-05-06 03:24:15,368]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started {org.springframework.web.context.ContextLoader}
+TID: [-1234] [] [2016-05-06 03:24:15,813]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Fri May 06 03:24:15 UTC 2016]; root of context hierarchy {org.springframework.web.context.support.XmlWebApplicationContext}
+TID: [-1234] [] [2016-05-06 03:24:16,656]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-05-06 03:24:17,262]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-05-06 03:24:17,434]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-05-06 03:24:21,855]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@366f6105: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,servicesV11,servicesV10,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy {org.springframework.beans.factory.support.DefaultListableBeanFactory}
+TID: [-1234] [] [2016-05-06 03:24:27,186]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-05-06 03:24:27,827]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /v11 {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-05-06 03:24:28,259]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /v10 {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-05-06 03:24:28,304]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 12935 ms {org.springframework.web.context.ContextLoader}
+TID: [-1234] [] [2016-05-06 03:24:28,489]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api].File[/home/ml/wso2ml-1.1.0/repository/deployment/server/webapps/api.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-05-06 03:24:32,239]  INFO {JAGGERY.js.serverUrl:js} -  WSO2 Machine Learner Console URL : https://172.17.0.2:-1/ml {JAGGERY.js.serverUrl:js}
+TID: [-1234] [] [2016-05-06 03:24:32,271]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ml].File[/home/ml/wso2ml-1.1.0/repository/deployment/server/jaggeryapps/ml] {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer}
+TID: [-1234] [] [2016-05-06 03:24:32,304]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read {org.apache.tomcat.util.net.NioSelectorPool}
+TID: [-1234] [] [2016-05-06 03:24:32,650]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} -  Task service starting in STANDALONE mode... {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl}
+TID: [-1234] [] [2016-05-06 03:24:34,202]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Analytics Indexing Mode: STANDALONE {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+TID: [-1234] [] [2016-05-06 03:24:34,210]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Processing Analytics Indexing Shards {0=6} {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+TID: [-1234] [] [2016-05-06 03:24:34,211]  INFO {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl} -  Data purging is enabled in this node {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl}
+TID: [-1234] [] [2016-05-06 03:24:34,355]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Loading Spark defaults from /home/ml/wso2ml-1.1.0/repository/conf/spark/spark-defaults.conf {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-05-06 03:24:35,169]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Starting SPARK in the LOCAL mode... {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-05-06 03:24:35,537]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi {org.wso2.carbon.core.init.JMXServerManager}
+TID: [-1234] [] [2016-05-06 03:24:35,692]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Machine Learner-1.1.0 {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
+TID: [-1234] [] [2016-05-06 03:24:35,694]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 227 sec {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
+TID: [-1234] [] [2016-05-06 03:24:37,201]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://172.17.0.2:-1/carbon/ {org.wso2.carbon.ui.internal.CarbonUIServiceComponent}
+TID: [-1234] [] [2016-05-06 03:31:22,310]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=6, name=mascotas-ds, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=mascotas-ds, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
+TID: [-1] [] [2016-05-06 03:31:23,150] ERROR {org.wso2.carbon.ml.core.impl.SummaryStatsGenerator} -  Error occurred while calculating summary statistics for dataset version 6: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas-ds.-1234.1462505479915. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv {org.wso2.carbon.ml.core.impl.SummaryStatsGenerator}
+org.wso2.carbon.ml.core.exceptions.MLDataProcessingException: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas-ds.-1234.1462505479915. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
+	at org.wso2.carbon.ml.core.impl.FileDatasetProcessor.takeSample(FileDatasetProcessor.java:94)
+	at org.wso2.carbon.ml.core.impl.SummaryStatsGenerator.run(SummaryStatsGenerator.java:103)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.message.DbException.convertIOException(DbException.java:313)
-	at org.h2.store.FileStore.write(FileStore.java:338)
-	at org.h2.store.PageStore.writePage(PageStore.java:1141)
-	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
-	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
-	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
-	at org.h2.store.PageLog.write(PageLog.java:498)
-	at org.h2.store.PageLog.commit(PageLog.java:518)
-	at org.h2.store.PageStore.commit(PageStore.java:1249)
-	at org.h2.engine.Database.commit(Database.java:1706)
-	at org.h2.engine.Session.commit(Session.java:468)
-	at org.h2.command.Command.stop(Command.java:168)
-	at org.h2.command.Command.executeUpdate(Command.java:244)
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
-	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
-	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
-	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+Caused by: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas-ds.-1234.1462505479915. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
+	at org.wso2.carbon.ml.core.utils.MLUtils.getSample(MLUtils.java:84)
+	at org.wso2.carbon.ml.core.impl.FileDatasetProcessor.takeSample(FileDatasetProcessor.java:91)
+	... 4 more
+Caused by: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
+	at org.wso2.carbon.ml.core.utils.MLUtils.getSample(MLUtils.java:77)
+	... 5 more
+TID: [-1234] [] [2016-05-06 03:31:30,108]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset] 1 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
+TID: [-1234] [] [2016-05-06 03:31:33,198]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset] 5 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
+TID: [-1234] [] [2016-05-06 03:31:44,038]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Deleted] [project] 1 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:31:46,287]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Deleted] [project] 3 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:31:48,627]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Deleted] [project] 4 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:31:50,902]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Deleted] [project] 5 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:32:08,958]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=mascotas-pro, datasetName=mascotas-ds, datasetId=6, datasetStatus=null, tenantId=-1234, userName=admin, description=mascotas-pro, createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:32:36,118]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset] 6 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
+TID: [-1234] [] [2016-05-06 03:32:42,307]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Deleted] [project] 36 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:33:31,078]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=7, name=mascotas-ds, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=mascotas-ds, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
+TID: [-1234] [] [2016-05-06 03:33:48,615]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=mascotas-pro, datasetName=mascotas-ds, datasetId=7, datasetStatus=null, tenantId=-1234, userName=admin, description=mascotas-pro, createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
+TID: [-1234] [] [2016-05-06 03:33:56,020]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=37, name=mascotas-ana, tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
+TID: [-1234] [] [2016-05-06 03:35:37,269]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Created] MLModelNew [id=0, name=mascotas-ana.Model.2016-05-06_03-35-37, tenantId=-1234, userName=admin, createdTime=null, analysisId=6, versionSetId=7, storageType=file, storageDirectory=/home/ml/wso2ml-1.1.0/models, status=Not Started, error=null] {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:35:37,470]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Build model [id] 5 job is successfully submitted to Spark. {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:35:38,888] ERROR {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Failed to build the model [id] 5  {org.wso2.carbon.ml.core.impl.MLModelHandler}
+org.wso2.carbon.ml.core.exceptions.MLModelBuilderException: An error occurred while building linear regression model: Job aborted due to stage failure: Task 0 in stage 9.0 failed 1 times, most recent failure: Lost task 0.0 in stage 9.0 (TID 9, localhost): org.wso2.carbon.ml.core.exceptions.MLModelBuilderException: An error occurred while transforming tokens: For input string: "SOLTERO"
+	at org.wso2.carbon.ml.core.spark.transformations.StringArrayToDoubleArray.call(StringArrayToDoubleArray.java:40)
+	at org.wso2.carbon.ml.core.spark.transformations.StringArrayToDoubleArray.call(StringArrayToDoubleArray.java:24)
+	at org.apache.spark.api.java.JavaPairRDD$$anonfun$toScalaFunction$1.apply(JavaPairRDD.scala:1027)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at scala.collection.Iterator$$anon$14.hasNext(Iterator.scala:389)
+	at org.apache.spark.storage.MemoryStore.unrollSafely(MemoryStore.scala:276)
+	at org.apache.spark.CacheManager.putInBlockManager(CacheManager.scala:171)
+	at org.apache.spark.CacheManager.getOrCompute(CacheManager.scala:78)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:242)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:277)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:244)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.IOException: Protocol error
-	at java.io.RandomAccessFile.writeBytes0(Native Method)
-	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
-	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
-	at org.h2.store.FileStore.write(FileStore.java:336)
-	... 24 more
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-TID: [-1] [] [2016-05-02 13:54:38,471] ERROR {org.wso2.carbon.metrics.reporter.JDBCReporter} -  Error when reporting timers {org.wso2.carbon.metrics.reporter.JDBCReporter}
-org.h2.jdbc.JdbcBatchUpdateException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1098)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportTimers(JDBCReporter.java:369)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:193)
-	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
-	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.message.DbException.convertIOException(DbException.java:313)
-	at org.h2.store.FileStore.write(FileStore.java:338)
-	at org.h2.store.PageStore.writePage(PageStore.java:1141)
-	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
-	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
-	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
-	at org.h2.store.PageLog.write(PageLog.java:498)
-	at org.h2.store.PageLog.commit(PageLog.java:518)
-	at org.h2.store.PageStore.commit(PageStore.java:1249)
-	at org.h2.engine.Database.commit(Database.java:1706)
-	at org.h2.engine.Session.commit(Session.java:468)
-	at org.h2.command.Command.stop(Command.java:168)
-	at org.h2.command.Command.executeUpdate(Command.java:244)
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
-	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportTimers(JDBCReporter.java:369)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:193)
-	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
-	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.IOException: Protocol error
-	at java.io.RandomAccessFile.writeBytes0(Native Method)
-	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
-	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
-	at org.h2.store.FileStore.write(FileStore.java:336)
-	... 24 more
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
-TID: [-1] [] [2016-05-02 13:55:31,965] ERROR {org.wso2.carbon.metrics.reporter.JDBCReporter} -  Error when reporting gauges {org.wso2.carbon.metrics.reporter.JDBCReporter}
-org.h2.jdbc.JdbcSQLException: General error: "java.lang.LinkageError: Error reading class bytes: org.h2.store.SessionState" [50000-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.message.DbException.convert(DbException.java:275)
-	at org.h2.engine.Database.openDatabase(Database.java:237)
-	at org.h2.engine.Database.<init>(Database.java:202)
-	at org.h2.engine.Engine.openSession(Engine.java:56)
-	at org.h2.engine.Engine.openSession(Engine.java:146)
-	at org.h2.engine.Engine.getSession(Engine.java:125)
-	at org.h2.engine.Session.createSession(Session.java:122)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:241)
-	at org.h2.engine.SessionRemote.createSession(SessionRemote.java:219)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:111)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:95)
-	at org.h2.Driver.connect(Driver.java:73)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:278)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.reconnect(PooledConnection.java:315)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:794)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:619)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:188)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:128)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:203)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
-	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
-	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.LinkageError: Error reading class bytes: org.h2.store.SessionState
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:558)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:492)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:465)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
-	at org.h2.store.PageLog.getOrAddSessionState(PageLog.java:762)
-	at org.h2.store.PageLog.setLastCommitForSession(PageLog.java:745)
-	at org.h2.store.PageLog.recover(PageLog.java:348)
-	at org.h2.store.PageStore.recover(PageStore.java:1167)
-	at org.h2.store.PageStore.openExisting(PageStore.java:317)
-	at org.h2.store.PageStore.open(PageStore.java:271)
-	at org.h2.engine.Database.getPageStore(Database.java:2059)
-	at org.h2.engine.Database.open(Database.java:534)
-	at org.h2.engine.Database.openDatabase(Database.java:207)
-	... 28 more
-Caused by: java.util.zip.ZipException: error reading zip file
-	at java.util.zip.ZipFile.read(Native Method)
-	at java.util.zip.ZipFile.access$1400(ZipFile.java:56)
-	at java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:679)
-	at java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:415)
-	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
-	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleEntry$ZipBundleEntryInputStream.read(ZipBundleEntry.java:157)
-	at org.eclipse.osgi.internal.baseadaptor.AdaptorUtil.getBytes(AdaptorUtil.java:247)
-	at org.eclipse.osgi.baseadaptor.bundlefile.BundleEntry.getBytes(BundleEntry.java:96)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:554)
-	... 46 more
-TID: [-1] [] [2016-05-02 13:55:32,081] ERROR {org.wso2.carbon.metrics.reporter.JDBCReporter} -  Error when reporting timers {org.wso2.carbon.metrics.reporter.JDBCReporter}
-org.h2.jdbc.JdbcSQLException: General error: "java.lang.LinkageError: org/h2/store/SessionState" [50000-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.message.DbException.convert(DbException.java:275)
-	at org.h2.engine.Database.openDatabase(Database.java:237)
-	at org.h2.engine.Database.<init>(Database.java:202)
-	at org.h2.engine.Engine.openSession(Engine.java:56)
-	at org.h2.engine.Engine.openSession(Engine.java:146)
-	at org.h2.engine.Engine.getSession(Engine.java:125)
-	at org.h2.engine.Session.createSession(Session.java:122)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:241)
-	at org.h2.engine.SessionRemote.createSession(SessionRemote.java:219)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:111)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:95)
-	at org.h2.Driver.connect(Driver.java:73)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:278)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:188)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:128)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportTimers(JDBCReporter.java:359)
-	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:193)
-	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
-	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.LinkageError: org/h2/store/SessionState
-	at org.h2.store.PageLog.getOrAddSessionState(PageLog.java:762)
-	at org.h2.store.PageLog.setLastCommitForSession(PageLog.java:745)
-	at org.h2.store.PageLog.recover(PageLog.java:348)
-	at org.h2.store.PageStore.recover(PageStore.java:1167)
-	at org.h2.store.PageStore.openExisting(PageStore.java:317)
-	at org.h2.store.PageStore.open(PageStore.java:271)
-	at org.h2.engine.Database.getPageStore(Database.java:2059)
-	at org.h2.engine.Database.open(Database.java:534)
-	at org.h2.engine.Database.openDatabase(Database.java:207)
-	... 27 more
-TID: [-1234] [] [2016-05-02 13:57:01,093]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,113]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-85-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,113]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-7-openjdk-amd64/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,114]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_95 {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,114]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : OpenJDK 64-Bit Server VM 24.95-b01,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,115]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/ml/wso2ml-1.1.0 {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,116]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/ml/wso2ml-1.1.0/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,116]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : root, en-US, Etc/UTC {org.wso2.carbon.core.internal.CarbonCoreActivator}
-TID: [-1234] [] [2016-05-02 13:57:01,501]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
-TID: [-1234] [] [2016-05-02 13:57:01,502]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 0 of the system is below the recommended minimum size :2047 {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
-TID: [-1] [] [2016-05-02 13:57:01,539]  INFO {org.wso2.carbon.databridge.agent.thrift.AgentHolder} -  Agent created ! {org.wso2.carbon.databridge.agent.thrift.AgentHolder}
-TID: [-1] [] [2016-05-02 13:57:01,630]  INFO {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS} -  Successfully deployed Agent Client {org.wso2.carbon.databridge.agent.thrift.internal.AgentDS}
-TID: [-1234] [] [2016-05-02 13:57:07,010]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 134ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
-TID: [-1234] [] [2016-05-02 13:57:07,276]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
-TID: [-1234] [] [2016-05-02 13:57:08,192]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'ml', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.MetricServiceImpl}
-TID: [-1234] [] [2016-05-02 13:57:08,215]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
-TID: [-1234] [] [2016-05-02 13:57:08,249]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
-TID: [-1234] [] [2016-05-02 13:57:09,045]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
-TID: [-1] [] [2016-05-02 13:57:59,004]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined {org.apache.catalina.startup.TaglibUriRule}
-TID: [-1234] [] [2016-05-02 13:58:00,865]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled {org.apache.axis2.deployment.ClusterBuilder}
-TID: [-1234] [] [2016-05-02 13:58:01,481]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
-TID: [-1234] [] [2016-05-02 13:58:01,482]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
-TID: [-1234] [] [2016-05-02 13:58:01,787]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v16 - file:/home/ml/wso2ml-1.1.0/repository/deployment/client/modules/addressing-1.6.1-wso2v16.mar {org.apache.axis2.deployment.ModuleDeployer}
-TID: [-1234] [] [2016-05-02 13:58:05,318]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /home/ml/wso2ml-1.1.0/repository/deployment/server/ {org.wso2.carbon.core.init.CarbonServerManager}
-TID: [-1234] [] [2016-05-02 13:58:05,430]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig}
-TID: [-1234] [] [2016-05-02 13:58:05,446]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 {org.wso2.carbon.core.internal.permission.update.PermissionUpdater}
-TID: [-1234] [] [2016-05-02 13:58:09,686]  INFO {org.wso2.carbon.ml.core.internal.MLCoreDS} -  H2O Server will start in local mode. {org.wso2.carbon.ml.core.internal.MLCoreDS}
-TID: [-1234] [] [2016-05-02 13:58:11,188]  INFO {org.wso2.carbon.ml.core.impl.H2OServer} -  H2o Server has started. {org.wso2.carbon.ml.core.impl.H2OServer}
-TID: [-1234] [] [2016-05-02 13:58:11,205]  INFO {org.wso2.carbon.ml.core.internal.MLCoreDS} -  ML core bundle activated successfully. {org.wso2.carbon.ml.core.internal.MLCoreDS}
-TID: [-1234] [] [2016-05-02 13:58:11,288]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9443 {org.wso2.carbon.core.transports.http.HttpTransportListener}
-TID: [-1234] [] [2016-05-02 13:58:13,087]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: echo {super-tenant} {org.wso2.carbon.core.deployment.DeploymentInterceptor}
-TID: [-1234] [] [2016-05-02 13:58:13,092]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: Echo.aar - file:/home/ml/wso2ml-1.1.0/repository/deployment/server/axis2services/Echo.aar {org.apache.axis2.deployment.DeploymentEngine}
-TID: [-1234] [] [2016-05-02 13:58:13,252]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: Version {super-tenant} {org.wso2.carbon.core.deployment.DeploymentInterceptor}
-TID: [-1234] [] [2016-05-02 13:58:13,257]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: Version.aar - file:/home/ml/wso2ml-1.1.0/repository/deployment/server/axis2services/Version.aar {org.apache.axis2.deployment.DeploymentEngine}
-TID: [-1234] [] [2016-05-02 13:58:21,326]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started {org.springframework.web.context.ContextLoader}
-TID: [-1234] [] [2016-05-02 13:58:21,544]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Mon May 02 13:58:21 UTC 2016]; root of context hierarchy {org.springframework.web.context.support.XmlWebApplicationContext}
-TID: [-1234] [] [2016-05-02 13:58:21,904]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
-TID: [-1234] [] [2016-05-02 13:58:22,414]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
-TID: [-1234] [] [2016-05-02 13:58:22,523]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
-TID: [-1234] [] [2016-05-02 13:58:24,854]  INFO {java.util.prefs.FileSystemPreferences$1} -  Created user preferences directory. {java.util.prefs.FileSystemPreferences$1}
-TID: [-1234] [] [2016-05-02 13:58:25,049]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2c0e6f1e: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,servicesV11,servicesV10,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy {org.springframework.beans.factory.support.DefaultListableBeanFactory}
-TID: [-1234] [] [2016-05-02 13:58:27,875]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / {org.apache.cxf.endpoint.ServerImpl}
-TID: [-1234] [] [2016-05-02 13:58:28,168]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /v11 {org.apache.cxf.endpoint.ServerImpl}
-TID: [-1234] [] [2016-05-02 13:58:28,355]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /v10 {org.apache.cxf.endpoint.ServerImpl}
-TID: [-1234] [] [2016-05-02 13:58:28,372]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 7045 ms {org.springframework.web.context.ContextLoader}
-TID: [-1234] [] [2016-05-02 13:58:28,450]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api].File[/home/ml/wso2ml-1.1.0/repository/deployment/server/webapps/api.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
-TID: [-1234] [] [2016-05-02 13:58:30,490]  INFO {JAGGERY.js.serverUrl:js} -  WSO2 Machine Learner Console URL : https://172.17.0.2:-1/ml {JAGGERY.js.serverUrl:js}
-TID: [-1234] [] [2016-05-02 13:58:30,502]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ml].File[/home/ml/wso2ml-1.1.0/repository/deployment/server/jaggeryapps/ml] {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer}
-TID: [-1234] [] [2016-05-02 13:58:30,528]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read {org.apache.tomcat.util.net.NioSelectorPool}
-TID: [-1234] [] [2016-05-02 13:58:30,735]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} -  Task service starting in STANDALONE mode... {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl}
-TID: [-1234] [] [2016-05-02 13:58:31,578]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Analytics Indexing Mode: STANDALONE {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
-TID: [-1234] [] [2016-05-02 13:58:31,582]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Processing Analytics Indexing Shards {0=6} {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
-TID: [-1234] [] [2016-05-02 13:58:31,583]  INFO {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl} -  Data purging is enabled in this node {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl}
-TID: [-1234] [] [2016-05-02 13:58:31,633]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Loading Spark defaults from /home/ml/wso2ml-1.1.0/repository/conf/spark/spark-defaults.conf {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
-TID: [-1234] [] [2016-05-02 13:58:32,432]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Starting SPARK in the LOCAL mode... {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
-TID: [-1234] [] [2016-05-02 13:58:32,594]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi {org.wso2.carbon.core.init.JMXServerManager}
-TID: [-1234] [] [2016-05-02 13:58:32,624]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Machine Learner-1.1.0 {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
-TID: [-1234] [] [2016-05-02 13:58:32,626]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 122 sec {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
-TID: [-1234] [] [2016-05-02 13:58:33,108]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://172.17.0.2:-1/carbon/ {org.wso2.carbon.ui.internal.CarbonUIServiceComponent}
-TID: [-1234] [] [2016-05-02 13:59:16,989]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=2, name=mascotas, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=adopción de mascotas, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:00:11,969]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=proyecto mascotas, datasetName=mascotas, datasetId=2, datasetStatus=null, tenantId=-1234, userName=admin, description=proyecto mascotas , createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
-TID: [-1234] [] [2016-05-02 14:00:42,943]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=2, name=analisismascotas , tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
-TID: [-1234] [] [2016-05-02 14:01:07,107]  WARN {org.apache.cxf.jaxrs.utils.JAXRSUtils} -  No operation matching request path "/api/configs/algorithms//hyperParams" is found, Relative Path: /algorithms//hyperParams, HTTP Method: GET, ContentType: */*, Accept: application/json,text/javascript,*/*;q=0.01,. Please enable FINE/TRACE log level for more details. {org.apache.cxf.jaxrs.utils.JAXRSUtils}
-TID: [-1234] [] [2016-05-02 14:01:07,117]  WARN {org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper} -  WebApplicationException has been caught : no cause is available {org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper}
-TID: [-1234] [] [2016-05-02 14:01:08,807] ERROR {org.wso2.carbon.ml.rest.api.AnalysisApiV11} -  Error occurred while retrieving filtered feature names for the analysis [id] undefined of tenant [id] -1234 and [user] admin . Cause: org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException - An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140] {org.wso2.carbon.ml.rest.api.AnalysisApiV11}
-org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:98)
-	at org.wso2.carbon.ml.rest.api.AnalysisApiV11.getfilteredFeatures(AnalysisApiV11.java:278)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
-	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
-	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
-	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
-	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
-	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
-	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
-	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
-	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
-	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.wso2.carbon.ml.database.exceptions.DatabaseHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1227)
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:96)
-	... 52 more
-Caused by: org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.value.Value.convertTo(Value.java:791)
-	at org.h2.table.Table.compareTypeSave(Table.java:969)
-	at org.h2.index.BaseIndex.compareValues(BaseIndex.java:297)
-	at org.h2.index.BaseIndex.compareRows(BaseIndex.java:245)
-	at org.h2.index.PageBtree.find(PageBtree.java:117)
-	at org.h2.index.PageBtreeLeaf.find(PageBtreeLeaf.java:272)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:172)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:163)
-	at org.h2.index.IndexCursor.find(IndexCursor.java:136)
-	at org.h2.table.TableFilter.next(TableFilter.java:309)
-	at org.h2.command.dml.Select.queryFlat(Select.java:492)
-	at org.h2.command.dml.Select.queryWithoutCache(Select.java:579)
-	at org.h2.command.dml.Query.query(Query.java:241)
-	at org.h2.command.CommandContainer.query(CommandContainer.java:80)
-	at org.h2.command.Command.executeQuery(Command.java:132)
-	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:96)
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1220)
-	... 53 more
-Caused by: java.lang.NumberFormatException: For input string: "undefined"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:441)
-	at java.lang.Long.valueOf(Long.java:513)
-	at java.lang.Long.decode(Long.java:665)
-	at org.h2.value.Value.convertTo(Value.java:750)
-	... 69 more
-TID: [-1234] [] [2016-05-02 14:01:08,874] ERROR {org.wso2.carbon.ml.rest.api.AnalysisApiV11} -  Error occurred while retrieving filtered feature names for the analysis [id] undefined of tenant [id] -1234 and [user] admin . Cause: org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException - An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140] {org.wso2.carbon.ml.rest.api.AnalysisApiV11}
-org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:98)
-	at org.wso2.carbon.ml.rest.api.AnalysisApiV11.getfilteredFeatures(AnalysisApiV11.java:278)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
-	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
-	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
-	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
-	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
-	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
-	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
-	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
-	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
-	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.wso2.carbon.ml.database.exceptions.DatabaseHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1227)
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:96)
-	... 52 more
-Caused by: org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.value.Value.convertTo(Value.java:791)
-	at org.h2.table.Table.compareTypeSave(Table.java:969)
-	at org.h2.index.BaseIndex.compareValues(BaseIndex.java:297)
-	at org.h2.index.BaseIndex.compareRows(BaseIndex.java:245)
-	at org.h2.index.PageBtree.find(PageBtree.java:117)
-	at org.h2.index.PageBtreeLeaf.find(PageBtreeLeaf.java:272)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:172)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:163)
-	at org.h2.index.IndexCursor.find(IndexCursor.java:136)
-	at org.h2.table.TableFilter.next(TableFilter.java:309)
-	at org.h2.command.dml.Select.queryFlat(Select.java:492)
-	at org.h2.command.dml.Select.queryWithoutCache(Select.java:579)
-	at org.h2.command.dml.Query.query(Query.java:241)
-	at org.h2.command.CommandContainer.query(CommandContainer.java:80)
-	at org.h2.command.Command.executeQuery(Command.java:132)
-	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:96)
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1220)
-	... 53 more
-Caused by: java.lang.NumberFormatException: For input string: "undefined"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:441)
-	at java.lang.Long.valueOf(Long.java:513)
-	at java.lang.Long.decode(Long.java:665)
-	at org.h2.value.Value.convertTo(Value.java:750)
-	... 69 more
-TID: [-1234] [] [2016-05-02 14:01:23,082]  WARN {org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper} -  WebApplicationException has been caught : For input string: "undefined" {org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper}
-TID: [-1234] [] [2016-05-02 14:01:23,094] ERROR {org.wso2.carbon.ml.rest.api.AnalysisApiV11} -  Error occurred while retrieving filtered feature names for the analysis [id] undefined of tenant [id] -1234 and [user] admin . Cause: org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException - An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140] {org.wso2.carbon.ml.rest.api.AnalysisApiV11}
-org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:98)
-	at org.wso2.carbon.ml.rest.api.AnalysisApiV11.getfilteredFeatures(AnalysisApiV11.java:278)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
-	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
-	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
-	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
-	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
-	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
-	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
-	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
-	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
-	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.wso2.carbon.ml.database.exceptions.DatabaseHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1227)
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:96)
-	... 52 more
-Caused by: org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.value.Value.convertTo(Value.java:791)
-	at org.h2.table.Table.compareTypeSave(Table.java:969)
-	at org.h2.index.BaseIndex.compareValues(BaseIndex.java:297)
-	at org.h2.index.BaseIndex.compareRows(BaseIndex.java:245)
-	at org.h2.index.PageBtree.find(PageBtree.java:117)
-	at org.h2.index.PageBtreeLeaf.find(PageBtreeLeaf.java:272)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:172)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:163)
-	at org.h2.index.IndexCursor.find(IndexCursor.java:136)
-	at org.h2.table.TableFilter.next(TableFilter.java:309)
-	at org.h2.command.dml.Select.queryFlat(Select.java:492)
-	at org.h2.command.dml.Select.queryWithoutCache(Select.java:579)
-	at org.h2.command.dml.Query.query(Query.java:241)
-	at org.h2.command.CommandContainer.query(CommandContainer.java:80)
-	at org.h2.command.Command.executeQuery(Command.java:132)
-	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:96)
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1220)
-	... 53 more
-Caused by: java.lang.NumberFormatException: For input string: "undefined"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:441)
-	at java.lang.Long.valueOf(Long.java:513)
-	at java.lang.Long.decode(Long.java:665)
-	at org.h2.value.Value.convertTo(Value.java:750)
-	... 69 more
-TID: [-1234] [] [2016-05-02 14:01:23,232] ERROR {org.wso2.carbon.ml.rest.api.AnalysisApiV11} -  Error occurred while retrieving filtered feature names for the analysis [id] undefined of tenant [id] -1234 and [user] admin . Cause: org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException - An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140] {org.wso2.carbon.ml.rest.api.AnalysisApiV11}
-org.wso2.carbon.ml.core.exceptions.MLAnalysisHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:98)
-	at org.wso2.carbon.ml.rest.api.AnalysisApiV11.getfilteredFeatures(AnalysisApiV11.java:278)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
-	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
-	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
-	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
-	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
-	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
-	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
-	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
-	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
-	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
-	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
-	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
-	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
-	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
-	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.wso2.carbon.ml.database.exceptions.DatabaseHandlerException: An error occurred while retrieving feature names of the dataset for analysis: undefined: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1227)
-	at org.wso2.carbon.ml.core.impl.MLAnalysisHandler.getFeatureNames(MLAnalysisHandler.java:96)
-	... 52 more
-Caused by: org.h2.jdbc.JdbcSQLException: Data conversion error converting "undefined"; SQL statement:
-SELECT FEATURE_NAME FROM ML_FEATURE_CUSTOMIZED WHERE ANALYSIS_ID = ? AND FEATURE_TYPE = ? AND INCLUSION=TRUE [90021-140]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-	at org.h2.message.DbException.get(DbException.java:156)
-	at org.h2.value.Value.convertTo(Value.java:791)
-	at org.h2.table.Table.compareTypeSave(Table.java:969)
-	at org.h2.index.BaseIndex.compareValues(BaseIndex.java:297)
-	at org.h2.index.BaseIndex.compareRows(BaseIndex.java:245)
-	at org.h2.index.PageBtree.find(PageBtree.java:117)
-	at org.h2.index.PageBtreeLeaf.find(PageBtreeLeaf.java:272)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:172)
-	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:163)
-	at org.h2.index.IndexCursor.find(IndexCursor.java:136)
-	at org.h2.table.TableFilter.next(TableFilter.java:309)
-	at org.h2.command.dml.Select.queryFlat(Select.java:492)
-	at org.h2.command.dml.Select.queryWithoutCache(Select.java:579)
-	at org.h2.command.dml.Query.query(Query.java:241)
-	at org.h2.command.CommandContainer.query(CommandContainer.java:80)
-	at org.h2.command.Command.executeQuery(Command.java:132)
-	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:96)
-	at org.wso2.carbon.ml.database.internal.MLDatabaseService.getFeatureNames(MLDatabaseService.java:1220)
-	... 53 more
-Caused by: java.lang.NumberFormatException: For input string: "undefined"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:441)
-	at java.lang.Long.valueOf(Long.java:513)
-	at java.lang.Long.decode(Long.java:665)
-	at org.h2.value.Value.convertTo(Value.java:750)
-	... 69 more
-TID: [-1234] [] [2016-05-02 14:01:49,783]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Deleted] [analysis id] 3 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
-TID: [-1234] [] [2016-05-02 14:01:59,573]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=2, name=analisismascotas, tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
-TID: [-1234] [] [2016-05-02 14:02:35,002]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Created] MLModelNew [id=0, name=analisismascotas.Model.2016-05-02_14-02-35, tenantId=-1234, userName=admin, createdTime=null, analysisId=4, versionSetId=2, storageType=file, storageDirectory=/home/ml/wso2ml-1.1.0/models, status=Not Started, error=null] {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:02:35,084]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Build model [id] 3 job is successfully submitted to Spark. {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:02:35,137] ERROR {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Failed to build the model [id] 3  {org.wso2.carbon.ml.core.impl.MLModelHandler}
-org.wso2.carbon.ml.core.exceptions.MLModelBuilderException: Categorical attribute ADOPTARIA S/N cannot be used as the response variable of the Numerical Prediction algorithm: LINEAR_REGRESSION
-	at org.wso2.carbon.ml.core.spark.algorithms.SupervisedSparkModelBuilder.build(SupervisedSparkModelBuilder.java:123)
+Caused by: java.lang.NumberFormatException: For input string: "SOLTERO"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1250)
+	at java.lang.Double.parseDouble(Double.java:540)
+	at org.wso2.carbon.ml.core.spark.transformations.StringArrayToDoubleArray.call(StringArrayToDoubleArray.java:36)
+	... 18 more
+
+Driver stacktrace:
+	at org.wso2.carbon.ml.core.spark.algorithms.SupervisedSparkModelBuilder.buildLinearRegressionModel(SupervisedSparkModelBuilder.java:622)
+	at org.wso2.carbon.ml.core.spark.algorithms.SupervisedSparkModelBuilder.build(SupervisedSparkModelBuilder.java:187)
 	at org.wso2.carbon.ml.core.impl.MLModelHandler$ModelBuilder.run(MLModelHandler.java:1078)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-TID: [-1234] [] [2016-05-02 14:02:47,290]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Deleted] Model [id] 3 {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:06:22,994]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Deleted] [analysis id] 4 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
-TID: [-1234] [] [2016-05-02 14:06:33,691]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset version] 2 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:12:18,551]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset] 2 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:12:35,721]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=3, name=mascotas, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=mascotas, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1] [] [2016-05-02 14:12:35,892] ERROR {org.wso2.carbon.ml.core.impl.SummaryStatsGenerator} -  Error occurred while calculating summary statistics for dataset version 3: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas.-1234.1462198355551. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv {org.wso2.carbon.ml.core.impl.SummaryStatsGenerator}
-org.wso2.carbon.ml.core.exceptions.MLDataProcessingException: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas.-1234.1462198355551. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
-	at org.wso2.carbon.ml.core.impl.FileDatasetProcessor.takeSample(FileDatasetProcessor.java:94)
-	at org.wso2.carbon.ml.core.impl.SummaryStatsGenerator.run(SummaryStatsGenerator.java:103)
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 9.0 failed 1 times, most recent failure: Lost task 0.0 in stage 9.0 (TID 9, localhost): org.wso2.carbon.ml.core.exceptions.MLModelBuilderException: An error occurred while transforming tokens: For input string: "SOLTERO"
+	at org.wso2.carbon.ml.core.spark.transformations.StringArrayToDoubleArray.call(StringArrayToDoubleArray.java:40)
+	at org.wso2.carbon.ml.core.spark.transformations.StringArrayToDoubleArray.call(StringArrayToDoubleArray.java:24)
+	at org.apache.spark.api.java.JavaPairRDD$$anonfun$toScalaFunction$1.apply(JavaPairRDD.scala:1027)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at scala.collection.Iterator$$anon$14.hasNext(Iterator.scala:389)
+	at org.apache.spark.storage.MemoryStore.unrollSafely(MemoryStore.scala:276)
+	at org.apache.spark.CacheManager.putInBlockManager(CacheManager.scala:171)
+	at org.apache.spark.CacheManager.getOrCompute(CacheManager.scala:78)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:242)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:277)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:244)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas.-1234.1462198355551. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
-	at org.wso2.carbon.ml.core.utils.MLUtils.getSample(MLUtils.java:84)
-	at org.wso2.carbon.ml.core.impl.FileDatasetProcessor.takeSample(FileDatasetProcessor.java:91)
-	... 4 more
-Caused by: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
-	at org.wso2.carbon.ml.core.utils.MLUtils.getSample(MLUtils.java:77)
-	... 5 more
-TID: [-1234] [] [2016-05-02 14:12:48,736]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Deleted] [project] 2 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLProjectHandler}
-TID: [-1234] [] [2016-05-02 14:13:15,168]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset version] 3 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:13:17,822]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset] 3 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:14:11,105]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=4, name=mascotas, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=mascotas, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1] [] [2016-05-02 14:14:11,254] ERROR {org.wso2.carbon.ml.core.impl.SummaryStatsGenerator} -  Error occurred while calculating summary statistics for dataset version 4: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas.-1234.1462198450983. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv {org.wso2.carbon.ml.core.impl.SummaryStatsGenerator}
-org.wso2.carbon.ml.core.exceptions.MLDataProcessingException: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas.-1234.1462198450983. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
-	at org.wso2.carbon.ml.core.impl.FileDatasetProcessor.takeSample(FileDatasetProcessor.java:94)
-	at org.wso2.carbon.ml.core.impl.SummaryStatsGenerator.run(SummaryStatsGenerator.java:103)
+Caused by: java.lang.NumberFormatException: For input string: "SOLTERO"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1250)
+	at java.lang.Double.parseDouble(Double.java:540)
+	at org.wso2.carbon.ml.core.spark.transformations.StringArrayToDoubleArray.call(StringArrayToDoubleArray.java:36)
+	... 18 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1273)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1264)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1263)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1263)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:730)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:730)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:730)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1457)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1418)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+TID: [-1234] [] [2016-05-06 03:35:54,528]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Deleted] Model [id] 5 {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:36:12,810]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Deleted] [analysis id] 6 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
+TID: [-1234] [] [2016-05-06 03:36:20,962]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=37, name=mascotas-ana, tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
+TID: [-1] [] [2016-05-06 03:37:59,931]  WARN {com.github.fommil.netlib.BLAS} -  Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS {com.github.fommil.netlib.BLAS}
+TID: [-1] [] [2016-05-06 03:37:59,934]  WARN {com.github.fommil.netlib.BLAS} -  Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS {com.github.fommil.netlib.BLAS}
+TID: [-1234] [] [2016-05-06 03:38:03,537]  WARN {org.apache.cxf.phase.PhaseInterceptorChain} -  Application {http://api.rest.ml.carbon.wso2.org/}LoginLogoutApiV10 has thrown exception, unwinding now {org.apache.cxf.phase.PhaseInterceptorChain}
+org.apache.cxf.interceptor.Fault: 0
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: Failed to extract the sample points from path: /home/ml/wso2ml-1.1.0/datasets/mascotas.-1234.1462198450983. Cause: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
-	at org.wso2.carbon.ml.core.utils.MLUtils.getSample(MLUtils.java:84)
-	at org.wso2.carbon.ml.core.impl.FileDatasetProcessor.takeSample(FileDatasetProcessor.java:91)
-	... 4 more
-Caused by: org.wso2.carbon.ml.core.exceptions.MLMalformedDatasetException: File content does not match the data format. [First Line] EDAD;GENERO ;CIUDAD;ESTADO CIVIL;# HIJOS;ESCOLARIDAD;# MASCOTAS;ADOPTARIA S/N [Data Format] csv
-	at org.wso2.carbon.ml.core.utils.MLUtils.getSample(MLUtils.java:77)
-	... 5 more
-TID: [-1234] [] [2016-05-02 14:14:26,546]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Deleted] [dataset] 4 of [user] admin of [tenant] -1234 {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:14:59,839]  INFO {org.wso2.carbon.ml.core.impl.MLDatasetProcessor} -  [Created] MLDataset [id=5, name=mascotas, tenantId=-1234, userName=admin, dataSourceType=file, dataTargetType=file, sourcePath=null, dataType=csv, comments=mascotas, version=1.0.0, containsHeader=true, status=Busy] {org.wso2.carbon.ml.core.impl.MLDatasetProcessor}
-TID: [-1234] [] [2016-05-02 14:15:25,292]  INFO {org.wso2.carbon.ml.core.impl.MLProjectHandler} -  [Created] MLProject [id=0, name=proyecto mascotas, datasetName=mascotas, datasetId=5, datasetStatus=null, tenantId=-1234, userName=admin, description=proyecto mascotas, createdTime=null] {org.wso2.carbon.ml.core.impl.MLProjectHandler}
-TID: [-1234] [] [2016-05-02 14:15:34,749]  INFO {org.wso2.carbon.ml.core.impl.MLAnalysisHandler} -  [Created] MLAnalysis [projectId=3, name=anamascotas, tenantId=-1234, userName=admin, comments=test comment] {org.wso2.carbon.ml.core.impl.MLAnalysisHandler}
-TID: [-1234] [] [2016-05-02 14:16:29,862]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Created] MLModelNew [id=0, name=anamascotas.Model.2016-05-02_14-16-29, tenantId=-1234, userName=admin, createdTime=null, analysisId=5, versionSetId=5, storageType=file, storageDirectory=/home/ml/wso2ml-1.1.0/models, status=Not Started, error=null] {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:16:29,974]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Build model [id] 4 job is successfully submitted to Spark. {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:16:30,887]  WARN {com.github.fommil.netlib.BLAS} -  Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS {com.github.fommil.netlib.BLAS}
-TID: [-1234] [] [2016-05-02 14:16:30,888]  WARN {com.github.fommil.netlib.BLAS} -  Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS {com.github.fommil.netlib.BLAS}
-TID: [-1234] [] [2016-05-02 14:16:37,769]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Successfully built the model [id] 4 in 7.797 seconds. {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:16:37,787]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Successfully persisted the model [id] 4 {org.wso2.carbon.ml.core.impl.MLModelHandler}
-TID: [-1234] [] [2016-05-02 14:20:22,376]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.064 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:20:39,347]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.069 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:20:44,733]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.048 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:20:52,401]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.05 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:20:56,752]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.046 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:21:02,702]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.039 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:21:07,646]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.026 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:21:12,040]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.068 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:21:30,262]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.05 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:26:41,903]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.153 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:26:51,025]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.045 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:26:56,030]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.026 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:00,756]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.048 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:05,866]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.059 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:11,358]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.046 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:26,984]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.043 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:31,886]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.05 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:40,613]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.038 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:41,779]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.048 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
-TID: [-1234] [] [2016-05-02 14:27:47,342]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 4 finished in 0.055 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.apache.spark.mllib.clustering.LocalKMeans$.kMeansPlusPlus(LocalKMeans.scala:48)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:396)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:393)
+	at scala.collection.parallel.immutable.ParRange$ParRangeIterator.map2combiner(ParRange.scala:105)
+	at scala.collection.parallel.ParIterableLike$Map.leaf(ParIterableLike.scala:1057)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$Map.tryLeaf(ParIterableLike.scala:1054)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:444)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:514)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:492)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:64)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.leaf(ParIterableLike.scala:961)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.tryLeaf(ParIterableLike.scala:956)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+TID: [-1234] [] [2016-05-06 03:38:03,725]  WARN {org.apache.cxf.phase.PhaseInterceptorChain} -  Exception in handleFault on interceptor org.apache.cxf.binding.xml.interceptor.XMLFaultOutInterceptor@7328eb82 {org.apache.cxf.phase.PhaseInterceptorChain}
+org.apache.cxf.interceptor.Fault: 0
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.apache.spark.mllib.clustering.LocalKMeans$.kMeansPlusPlus(LocalKMeans.scala:48)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:396)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:393)
+	at scala.collection.parallel.immutable.ParRange$ParRangeIterator.map2combiner(ParRange.scala:105)
+	at scala.collection.parallel.ParIterableLike$Map.leaf(ParIterableLike.scala:1057)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$Map.tryLeaf(ParIterableLike.scala:1054)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:444)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:514)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:492)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:64)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.leaf(ParIterableLike.scala:961)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.tryLeaf(ParIterableLike.scala:956)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+TID: [-1234] [] [2016-05-06 03:38:03,749] ERROR {org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver} -  Error occurred during error handling, give up! {org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver}
+org.apache.cxf.interceptor.Fault: 0
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.apache.spark.mllib.clustering.LocalKMeans$.kMeansPlusPlus(LocalKMeans.scala:48)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:396)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:393)
+	at scala.collection.parallel.immutable.ParRange$ParRangeIterator.map2combiner(ParRange.scala:105)
+	at scala.collection.parallel.ParIterableLike$Map.leaf(ParIterableLike.scala:1057)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$Map.tryLeaf(ParIterableLike.scala:1054)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:444)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:514)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:492)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:64)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.leaf(ParIterableLike.scala:961)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.tryLeaf(ParIterableLike.scala:956)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+TID: [-1234] [] [2016-05-06 03:38:03,779] ERROR {org.apache.catalina.core.StandardWrapperValve} -  Servlet.service() for servlet [MLRestApi] in context with path [/api] threw exception {org.apache.catalina.core.StandardWrapperValve}
+java.lang.RuntimeException: org.apache.cxf.interceptor.Fault: 0
+	at org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver.onMessage(AbstractFaultChainInitiatorObserver.java:110)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:323)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:207)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:213)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:154)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.cxf.interceptor.Fault: 0
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:167)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:94)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	... 37 more
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.apache.spark.mllib.clustering.LocalKMeans$.kMeansPlusPlus(LocalKMeans.scala:48)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:396)
+	at org.apache.spark.mllib.clustering.KMeans$$anonfun$22.apply(KMeans.scala:393)
+	at scala.collection.parallel.immutable.ParRange$ParRangeIterator.map2combiner(ParRange.scala:105)
+	at scala.collection.parallel.ParIterableLike$Map.leaf(ParIterableLike.scala:1057)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$Map.tryLeaf(ParIterableLike.scala:1054)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:444)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:514)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:492)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:64)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.leaf(ParIterableLike.scala:961)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:54)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:53)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:56)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.tryLeaf(ParIterableLike.scala:956)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:165)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:514)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+TID: [-1234] [] [2016-05-06 03:38:25,943]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  [Created] MLModelNew [id=0, name=mascotas-ana.Model.2016-05-06_03-38-25, tenantId=-1234, userName=admin, createdTime=null, analysisId=7, versionSetId=7, storageType=file, storageDirectory=/home/ml/wso2ml-1.1.0/models, status=Not Started, error=null] {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:38:26,050]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Build model [id] 6 job is successfully submitted to Spark. {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:38:40,335]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Successfully built the model [id] 6 in 14.286 seconds. {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:38:40,352]  INFO {org.wso2.carbon.ml.core.impl.MLModelHandler} -  Successfully persisted the model [id] 6 {org.wso2.carbon.ml.core.impl.MLModelHandler}
+TID: [-1234] [] [2016-05-06 03:39:15,989]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.103 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 03:44:17,364]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.213 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 03:45:16,402]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.098 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 04:20:04,015]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.299 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 04:20:15,367]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.09 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 04:20:15,824]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.054 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 04:33:23,662]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.276 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 04:34:21,921]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.128 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:02:11,193]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.343 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:02:13,341]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.115 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:03:12,805]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.091 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:03:14,861]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.057 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:06:15,564]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.29 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:06:23,793]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.086 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:07:10,691]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.06 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:07:36,822]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.076 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:07:40,323]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.056 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:08:06,426]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.087 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}
+TID: [-1234] [] [2016-05-06 05:08:34,488]  INFO {org.wso2.carbon.ml.rest.api.ModelApiV11} -  Prediction from model [id] 6 finished in 0.059 seconds. {org.wso2.carbon.ml.rest.api.ModelApiV11}

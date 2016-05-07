@@ -35,6 +35,8 @@
 	<classpathentry kind="lib" path="lib/gson-2.5.jar"/>
 	<classpathentry kind="lib" path="lib/okhttp-3.2.0.jar"/>
 	<classpathentry kind="lib" path="lib/okio-1.7.0.jar"/>
+	<classpathentry kind="lib" path="lib/elibom-java-0.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/json-20160212.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/storm"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

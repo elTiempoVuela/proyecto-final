@@ -1,0 +1,10 @@
+[2016-05-02 13:58:42,963]  INFO -  User [name] admin of tenant [id] -1234 [domain] carbon.super is logged-in into WSO2 Machine Learner. Granted session id is BE2D74FDC2A77D259C9AF796DD7BF75E 
+[2016-05-02 14:01:49,786]  INFO -  User [name] admin of tenant [id] -1234 deleted an analysis [id] 3  
+[2016-05-02 14:02:47,291]  INFO -  User [name] admin of tenant [id] -1234 deleted a model [id] 3  
+[2016-05-02 14:06:23,008]  INFO -  User [name] admin of tenant [id] -1234 deleted an analysis [id] 4  
+[2016-05-02 14:06:33,697]  INFO -  User [name] admin of tenant [id] -1234 deleted a dataset version [id] 2  
+[2016-05-02 14:12:18,554]  INFO -  User [name] admin of tenant [id] -1234 deleted a dataset [id] 2  
+[2016-05-02 14:12:48,738]  INFO -  User [name] admin of tenant [id] -1234 deleted a project [id] 2  
+[2016-05-02 14:13:15,173]  INFO -  User [name] admin of tenant [id] -1234 deleted a dataset version [id] 3  
+[2016-05-02 14:13:17,824]  INFO -  User [name] admin of tenant [id] -1234 deleted a dataset [id] 3  
+[2016-05-02 14:14:26,546]  INFO -  User [name] admin of tenant [id] -1234 deleted a dataset [id] 4  
