@@ -59,8 +59,11 @@ public class Keys {
 	public static final String MESSAGE_NUMBER = "message.number";
 	public static final String MESSAGE_ENABLED = "message.enabled";
 
+	public static final String WATSON_URLSERVICE = "watson.urlservice";
+	public static final String WATSON_TONES = "watson.tones";
 	
 	public static final String MONGO_BOLT_COUNT = "mongodbbolt.count";
+	
 	
 	
 	//bridge

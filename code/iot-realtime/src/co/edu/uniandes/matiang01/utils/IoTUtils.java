@@ -45,9 +45,9 @@ public class IoTUtils {
 
 
 
-	public static String getNotify(String event, String usuario, String interes, String msg) {
+	public static String getNotify(String event, String usuario, String interes, String msg, String tweet) {
 		Notify t = null;
-		Message m = new Message(usuario,interes,msg);
+		Message m = new Message(usuario,interes,msg,tweet);
 		t = new Notify(event,m);
 		return GSonUtils.serialize(t);
 	}

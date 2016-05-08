@@ -3,8 +3,10 @@ package com.uniandes.mascotas.bolt;
 import java.util.Properties;
 
 import backtype.storm.tuple.Tuple;
+import co.edu.uniandes.matiang01.iot.model.Tone;
 import co.edu.uniandes.matiang01.storm.Keys;
 import co.edu.uniandes.matiang01.storm.bolt.MongodbBolt;
+import co.edu.uniandes.matiang01.utils.GSonUtils;
 import co.edu.uniandes.matiang01.utils.IoTUtils;
 import co.edu.uniandes.matiang01.utils.Log;
 import co.edu.uniandes.matiang01.utils.RestUtils;
@@ -18,9 +20,11 @@ public class BoltPersistencia extends MongodbBolt {
 	
 	private Properties configs;
 	private static final String INTERES = "[INTERES]";
+	private static final String WATSON_TONE = "watson.tone.";
 	private String text="";
 	private String movil="";
 	private boolean smsEnabled = false;
+	private String watsonUrlservice;
 	
 	public BoltPersistencia(String urlConnection, String db, String collection, Properties configs) {
 		super(urlConnection, db, collection);
@@ -28,6 +32,7 @@ public class BoltPersistencia extends MongodbBolt {
 		this.text = configs.getProperty(Keys.MESSAGE_TEXT);
 		this.movil = configs.getProperty(Keys.MESSAGE_NUMBER);
 		this.smsEnabled = Boolean.valueOf(configs.getProperty(Keys.MESSAGE_ENABLED));
+		this.watsonUrlservice =  configs.getProperty(Keys.WATSON_URLSERVICE);
 	}
 
 
@@ -64,30 +69,10 @@ public class BoltPersistencia extends MongodbBolt {
 				if(content!= null){
 					DBObject mongoDoc = getMongoDocForInput(content);
 					
-		
 					try{
 						DB database = mongoClient.getDB(db);
-						DBCollection dbCollection = database.getCollection(collection);
-						dbCollection.insert(mongoDoc);
-
-						String msg = this.text.replace(INTERES, interes);
-						
-						String contentNotify = IoTUtils.getNotify(topic,usuario,interes,msg);
-						DBObject mongoDocNofify = getMongoDocForInput(contentNotify);
-						DBCollection dbCollectionNotify = database.getCollection(collectionNotify);
-						dbCollectionNotify.insert(mongoDocNofify);
-						
-						if(Double.valueOf(adopta).doubleValue() > 0.5D){
-							ElibomRestClient elibom = new ElibomRestClient("jairo8005@hotmail.com", "LTC6RNXF57");
-							
-							String deliveryId ="N/A";
-							if(this.smsEnabled){
-								deliveryId = elibom.sendMessage(movil,msg);
-								System.out.println(" SMS enviado OK!");
-							}
-							System.out.println("deliveryId: " + deliveryId);
-						}
-						
+						watsonProccess(database,collectionNotify,topic,usuario,interes,tweet);
+						mlProccess(database,interes, adopta, mongoDoc);
 						collector.ack(tuple);
 					}catch(Exception e) {
 						e.printStackTrace();
@@ -97,4 +82,67 @@ public class BoltPersistencia extends MongodbBolt {
 			}
 		
 		}
+	
+
+	/**
+	 * Envía notificaciones dependiendo del tono y si supera el 50%
+	 * @param database
+	 * @param collectionNotify
+	 * @param topic
+	 * @param usuario
+	 * @param interes
+	 * @param tweet
+	 */
+	private void watsonProccess(DB database, String collectionNotify, String topic, String usuario, String interes, String tweet){
+		try{
+			
+			Tone t = GSonUtils.getTone(RestUtils.call(watsonUrlservice, tweet));
+			
+			if(Double.valueOf(t.getValue()).doubleValue() > 0.5D){
+				
+				String msg = configs.getProperty(WATSON_TONE+t.getTone().toLowerCase());
+				String contentNotify = IoTUtils.getNotify(topic,usuario,interes,msg,tweet);
+				DBObject mongoDocNofify = getMongoDocForInput(contentNotify);
+				DBCollection dbCollectionNotify = database.getCollection(collectionNotify);
+				dbCollectionNotify.insert(mongoDocNofify);
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+
+	/**
+	 * Determina a traves en machinelearner si la persona podrìa adoptar una mascota y notifica si supera el 50%
+	 * 
+	 * @param database
+	 * @param interes
+	 * @param adopta
+	 * @param mongoDoc
+	 */
+	private void mlProccess(DB database, final String interes, String adopta,DBObject mongoDoc) {
+		
+		try{
+			DBCollection dbCollection = database.getCollection(collection);
+			dbCollection.insert(mongoDoc);
+
+			String msg = this.text.replace(INTERES, interes);
+			
+			if(Double.valueOf(adopta).doubleValue() > 0.5D){
+				ElibomRestClient elibom = new ElibomRestClient("jairo8005@hotmail.com", "LTC6RNXF57");
+				
+				String deliveryId ="N/A";
+				if(this.smsEnabled){
+					deliveryId = elibom.sendMessage(movil,msg);
+					System.out.println(" SMS enviado OK!");
+				}
+				System.out.println("deliveryId: " + deliveryId);
+			}
+
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
 }

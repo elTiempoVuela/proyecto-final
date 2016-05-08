@@ -36,9 +36,32 @@ public class RestUtils {
 		return resp.replace("[", "").replace("]", "");
 	}
 	
+	public static String call(String url, String msg) {
+
+		String resp = "";
+		try {
+			OkHttpClient client = new OkHttpClient();
+			
+			Request request = new Request.Builder()
+			  .url(url+msg)
+			  .get()
+			  .addHeader("content-type", "application/json")
+			  .addHeader("cache-control", "no-cache")
+			  .addHeader("postman-token", "a8128fac-eba9-cbe7-cfbd-b6468e1aae34")
+			  .build();
+			
+			Response response = client.newCall(request).execute();
+			resp =  response.body().string();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return resp.replace("[", "").replace("]", "");
+	}
+	
 	
 	public static void main(String[] args) {
-		System.out.println(Double.valueOf(call("http://localhost:9443/api/models/6/predict?percentile=98","[[34,1,1,1]]","Basic YWRtaW46YWRtaW4=")).doubleValue() > 0.5D);
+		//System.out.println(GSonUtils.getTone("{\"tone\":\"Fear\",\"value\":0.999983}").getValue());
+		System.out.println(call("http://tone-matiang01.rhcloud.com/api/tone?msg=","anger"));
 	}
 }
 

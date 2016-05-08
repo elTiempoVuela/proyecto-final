@@ -5,11 +5,13 @@ public class Message {
 	private String cuenta;
 	private String interes;
 	private String message;
+	private String tweet;
 
-	public Message(String cuenta, String interes, String message) {
+	public Message(String cuenta, String interes, String message,String tweet) {
 		this.cuenta = cuenta;
 		this.interes = interes;
 		this.message = message;
+		this.tweet = tweet;
 	}
 
 	public Message() {
@@ -37,6 +39,14 @@ public class Message {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public String getTweet() {
+		return tweet;
+	}
+
+	public void setTweet(String tweet) {
+		this.tweet = tweet;
 	}
 
 }

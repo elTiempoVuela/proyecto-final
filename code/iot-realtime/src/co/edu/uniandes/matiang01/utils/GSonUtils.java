@@ -4,6 +4,7 @@ import java.util.Date;
 
 import co.edu.uniandes.matiang01.iot.model.MongoDate;
 import co.edu.uniandes.matiang01.iot.model.Temperature;
+import co.edu.uniandes.matiang01.iot.model.Tone;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,6 +15,12 @@ public class GSonUtils {
 	
 		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
 	    return gson.fromJson(data, Temperature.class);
+	}
+	
+	public static Tone getTone(String data){
+		
+		Gson gson = new GsonBuilder().create();
+	    return gson.fromJson(data, Tone.class);
 	}
 	
 	public static String serialize(Object instance){
