@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope,$state, Chats,$ionicScrollDelegate, localStorageService) {
+.controller('ChatsCtrl', function($scope,$state, $cordovaVibration, Chats,$ionicScrollDelegate, localStorageService	) {
 	
 	
 	
@@ -29,6 +29,13 @@ angular.module('starter.controllers', [])
 			
 		}
 		
+		try{
+		console.log($cordovaVibration);
+		$cordovaVibration.vibrate(1000);
+		 }catch(e){
+			 
+     	 }
+		 
 		$scope.chats.push(msg);
 		$ionicScrollDelegate.scrollBottom();
 		$scope.$broadcast('scroll.refreshComplete');
@@ -37,18 +44,23 @@ angular.module('starter.controllers', [])
 		});
   
   
- 
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('AccountCtrl', function($scope,localStorageService) {
   $scope.settings = {
     enableFriends: true
   };
+  
+      $scope.clear = function() {
+		var chats = [];
+		localStorageService.set('chats', chats);
+		$scope.$broadcast('scroll.refreshComplete');
+		console.log('done');
+  };
+  
 });
