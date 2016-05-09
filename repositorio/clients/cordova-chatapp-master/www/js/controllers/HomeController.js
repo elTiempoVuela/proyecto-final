@@ -10,29 +10,7 @@
 		me.rooms = ['mascotas', 'Art', 'Writing', 'Travel', 'Business', 'Photography'];
 		
 
-		
-		try {
-			
-			me.status = SocketService;
-			SocketService.on('connect', function () {
-			
-				me.status = me.status + 'connected';
-				console.log(me.status);	
-			});
-			
-			SocketService.on('disconnect', function () {
-				me.status = me.status + 'disconnect';
-				console.log(me.status);	
-			});
-				
-		}
-		catch(err) {
-			console.log(err);
-			me.status = err.message;
-		}
-
-
-		
+			me.status = 'Bienvenido a Pets ABC';
 		
 		
 		$scope.login = function(username){
