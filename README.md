@@ -11,17 +11,23 @@
 
 	docker pull matiang01/java
 	
-	docker pull matiang01/mosquitto
-
 4. Subir instancias (mosquitto = 172.17.0.2, machinelearner = 172.17.0.3 , kafka = 172.17.0.4)
-	
-	docker run --name mosquitto -p 1883:1883 -itd matiang01/mosquitto
-	
+		
 	docker run --name ml -p 9443:9443 -v /home/vagrant/machinelearner:/home/ml -h ml -itd matiang01/java
 	
 	docker run --name kafka -p 2181:2181 -p 8080:8080 -p 9092:9092 -v /home/vagrant/kafka:/home/kafka -itd matiang01/java
 	
 4. Configurar máquinas
+	
+	Configurar machinelearner	
+
+		docker exec -it ml bash
+		
+		cd /home/ml/wso2ml-1.1.0/
+		
+		bin/wso2server.sh &
+
+		exit
 	
 	Configurar storm
 	
@@ -30,12 +36,6 @@
 		cd /home/kafka/zookeeper-3.3.6
 			
 		bin/zkServer.sh start conf/zoo.cfg 
-		
-		#cd /home/kafka/kafka_2.9.2-0.8.2.2
-		
-		#bin/kafka-server-start.sh config/server.properties &
-		
-		#bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic iotdogs
 		
 		cd /home/kafka/apache-storm-0.10.0/
 	
@@ -48,12 +48,7 @@
 		java -jar iot-framework.jar --storm twitter default_config.properties
 
 	
-	Configurar machinelearner	
-
-		docker exec -it ml bash
-		
-		bin/wso2server.sh
-
+	
 	exit
 
 ##Validaciones:

@@ -6,15 +6,20 @@ public class Message {
 	private String interes;
 	private String message;
 	private String tweet;
+	private String tone;
+	private String value;
+	
 
-	public Message(String cuenta, String interes, String message,String tweet) {
+
+	public Message(String cuenta, String interes, String message, String tweet,
+			String tone, String value) {
+		super();
 		this.cuenta = cuenta;
 		this.interes = interes;
 		this.message = message;
 		this.tweet = tweet;
-	}
-
-	public Message() {
+		this.tone = tone;
+		this.value = value;
 	}
 
 	public String getCuenta() {
@@ -47,6 +52,22 @@ public class Message {
 
 	public void setTweet(String tweet) {
 		this.tweet = tweet;
+	}
+
+	public String getTone() {
+		return tone;
+	}
+
+	public void setTone(String tone) {
+		this.tone = tone;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 }

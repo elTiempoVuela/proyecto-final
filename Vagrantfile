@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "repositorio/", "/home/vagrant"
   
   config.vm.provider "virtualbox" do |v|
-	v.memory = 3000
+	v.memory = 4000
 	v.cpus = 2
   end
 end

@@ -12530,3 +12530,32 @@ Caused by: java.lang.NumberFormatException: For input string: "SOLTERO"
 [2016-05-06 04:21:09,026]  INFO {org.apache.spark.storage.BlockManager} -  Removing RDD 11 {org.apache.spark.storage.BlockManager}
 [2016-05-06 04:21:09,027]  INFO {org.apache.spark.ContextCleaner} -  Cleaned RDD 11 {org.apache.spark.ContextCleaner}
 [2016-05-06 04:21:09,033]  INFO {org.apache.spark.storage.BlockManagerInfo} -  Removed broadcast_13_piece0 on localhost:39807 in memory (size: 4.0 KB, free: 983.1 MB) {org.apache.spark.storage.BlockManagerInfo}
+[2016-05-10 03:18:19,490]  INFO {org.apache.spark.SparkContext} -  Running Spark version 1.4.1 {org.apache.spark.SparkContext}
+[2016-05-10 03:18:20,591]  WARN {org.apache.hadoop.util.NativeCodeLoader} -  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable {org.apache.hadoop.util.NativeCodeLoader}
+[2016-05-10 03:18:21,315]  INFO {org.apache.spark.SecurityManager} -  Changing view acls to: root {org.apache.spark.SecurityManager}
+[2016-05-10 03:18:21,319]  INFO {org.apache.spark.SecurityManager} -  Changing modify acls to: root {org.apache.spark.SecurityManager}
+[2016-05-10 03:18:21,322]  INFO {org.apache.spark.SecurityManager} -  SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(root); users with modify permissions: Set(root) {org.apache.spark.SecurityManager}
+[2016-05-10 03:18:24,188]  INFO {akka.event.slf4j.Slf4jLogger} -  Slf4jLogger started {akka.event.slf4j.Slf4jLogger}
+[2016-05-10 03:18:24,457]  INFO {Remoting} -  Starting remoting {Remoting}
+[2016-05-10 03:18:25,146]  INFO {Remoting} -  Remoting started; listening on addresses :[akka.tcp://sparkDriver@172.17.0.2:48874] {Remoting}
+[2016-05-10 03:18:25,183]  INFO {org.apache.spark.util.Utils} -  Successfully started service 'sparkDriver' on port 48874. {org.apache.spark.util.Utils}
+[2016-05-10 03:18:25,321]  INFO {org.apache.spark.SparkEnv} -  Registering MapOutputTracker {org.apache.spark.SparkEnv}
+[2016-05-10 03:18:25,398]  INFO {org.apache.spark.SparkEnv} -  Registering BlockManagerMaster {org.apache.spark.SparkEnv}
+[2016-05-10 03:18:25,548]  INFO {org.apache.spark.storage.DiskBlockManager} -  Created local directory at /home/ml/wso2ml-1.1.0/tmp/spark-24bb60c3-4fc3-4a8b-8c5d-e9e1568bf8ea/blockmgr-c600e637-ba9b-464a-b8f7-8b23bbff403f {org.apache.spark.storage.DiskBlockManager}
+[2016-05-10 03:18:25,575]  INFO {org.apache.spark.storage.MemoryStore} -  MemoryStore started with capacity 983.1 MB {org.apache.spark.storage.MemoryStore}
+[2016-05-10 03:18:25,822]  INFO {org.apache.spark.HttpFileServer} -  HTTP File server directory is /home/ml/wso2ml-1.1.0/tmp/spark-24bb60c3-4fc3-4a8b-8c5d-e9e1568bf8ea/httpd-cccd901b-64a1-4f2f-b46e-d45f173fe57a {org.apache.spark.HttpFileServer}
+[2016-05-10 03:18:25,837]  INFO {org.apache.spark.HttpServer} -  Starting HTTP Server {org.apache.spark.HttpServer}
+[2016-05-10 03:18:25,993]  INFO {org.spark-project.jetty.server.Server} -  jetty-8.y.z-SNAPSHOT {org.spark-project.jetty.server.Server}
+[2016-05-10 03:18:26,039]  INFO {org.spark-project.jetty.server.AbstractConnector} -  Started SocketConnector@0.0.0.0:46846 {org.spark-project.jetty.server.AbstractConnector}
+[2016-05-10 03:18:26,045]  INFO {org.apache.spark.util.Utils} -  Successfully started service 'HTTP file server' on port 46846. {org.apache.spark.util.Utils}
+[2016-05-10 03:18:26,113]  INFO {org.apache.spark.SparkEnv} -  Registering OutputCommitCoordinator {org.apache.spark.SparkEnv}
+[2016-05-10 03:18:28,891]  INFO {org.spark-project.jetty.server.Server} -  jetty-8.y.z-SNAPSHOT {org.spark-project.jetty.server.Server}
+[2016-05-10 03:18:28,924]  INFO {org.spark-project.jetty.server.AbstractConnector} -  Started SelectChannelConnector@0.0.0.0:4040 {org.spark-project.jetty.server.AbstractConnector}
+[2016-05-10 03:18:28,926]  INFO {org.apache.spark.util.Utils} -  Successfully started service 'SparkUI' on port 4040. {org.apache.spark.util.Utils}
+[2016-05-10 03:18:28,935]  INFO {org.apache.spark.ui.SparkUI} -  Started SparkUI at http://172.17.0.2:4040 {org.apache.spark.ui.SparkUI}
+[2016-05-10 03:18:29,565]  INFO {org.apache.spark.executor.Executor} -  Starting executor ID driver on host localhost {org.apache.spark.executor.Executor}
+[2016-05-10 03:18:30,561]  INFO {org.apache.spark.util.Utils} -  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42411. {org.apache.spark.util.Utils}
+[2016-05-10 03:18:30,568]  INFO {org.apache.spark.network.netty.NettyBlockTransferService} -  Server created on 42411 {org.apache.spark.network.netty.NettyBlockTransferService}
+[2016-05-10 03:18:30,573]  INFO {org.apache.spark.storage.BlockManagerMaster} -  Trying to register BlockManager {org.apache.spark.storage.BlockManagerMaster}
+[2016-05-10 03:18:30,590]  INFO {org.apache.spark.storage.BlockManagerMasterEndpoint} -  Registering block manager localhost:42411 with 983.1 MB RAM, BlockManagerId(driver, localhost, 42411) {org.apache.spark.storage.BlockManagerMasterEndpoint}
+[2016-05-10 03:18:30,599]  INFO {org.apache.spark.storage.BlockManagerMaster} -  Registered BlockManager {org.apache.spark.storage.BlockManagerMaster}

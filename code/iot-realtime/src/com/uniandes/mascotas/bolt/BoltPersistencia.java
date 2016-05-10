@@ -98,10 +98,14 @@ public class BoltPersistencia extends MongodbBolt {
 			
 			Tone t = GSonUtils.getTone(RestUtils.call(watsonUrlservice, tweet));
 			
-			if(Double.valueOf(t.getValue()).doubleValue() > 0.5D){
+			String slice = configs.getProperty(Keys.WATSON_SLICE);
+			
+			if(Double.valueOf(t.getValue()).doubleValue() > Double.valueOf(slice).doubleValue()){
+				String tone = t.getTone().toLowerCase();
+				String value = t.getValue();
+				String msg = configs.getProperty(WATSON_TONE+tone);
+				String contentNotify = IoTUtils.getNotify(topic,usuario,interes,msg,tweet,tone,value);
 				
-				String msg = configs.getProperty(WATSON_TONE+t.getTone().toLowerCase());
-				String contentNotify = IoTUtils.getNotify(topic,usuario,interes,msg,tweet);
 				DBObject mongoDocNofify = getMongoDocForInput(contentNotify);
 				DBCollection dbCollectionNotify = database.getCollection(collectionNotify);
 				dbCollectionNotify.insert(mongoDocNofify);

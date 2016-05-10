@@ -37,7 +37,7 @@ public class RestUtils {
 	}
 	
 	public static String call(String url, String msg) {
-
+System.out.println(msg);
 		String resp = "";
 		try {
 			OkHttpClient client = new OkHttpClient();

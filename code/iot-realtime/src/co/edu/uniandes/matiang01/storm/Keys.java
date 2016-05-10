@@ -61,6 +61,8 @@ public class Keys {
 
 	public static final String WATSON_URLSERVICE = "watson.urlservice";
 	public static final String WATSON_TONES = "watson.tones";
+	public static final String WATSON_SLICE = "watson.slice";
+	
 	
 	public static final String MONGO_BOLT_COUNT = "mongodbbolt.count";
 	
