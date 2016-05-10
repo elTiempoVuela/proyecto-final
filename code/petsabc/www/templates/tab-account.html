@@ -1,20 +1,34 @@
-<ion-view view-title="Account">
+<ion-view view-title="Account" cache-view="false">
 
  <ion-nav-bar class="bar-positive">
     <ion-nav-back-button></ion-nav-back-button>
   </ion-nav-bar>
   <ion-content>
    
-   
-<h1> Notifications</h1>
+
+
    <ion-list>
-
-	  <li class="item">
-      	<button class="button button-assertive" ng-click="clear()">
-  Clear
-</button>
-
-
+   
+   <div class="item">
+   <form name="userForm">
+		  <h1>User</h1>
+		 <label class="item item-input">
+		<input type="text" placeholder="User" ng-model="user.name"  ng-model-options="{ getterSetter: true }">
+		  </label>
+		  <button class="button button-positive" ng-click="saveUser()">
+		  Save
+		</button>
+	 </form>
+   </div>
+   
+   <div class="item">
+		<h1>Notifications</h1>
+      	<button class="button button-assertive" ng-click="clearNotifications()"> Clear </button>
+	</div>
+	 <div class="item">
+		<h1>Posts</h1>
+      	<button class="button button-assertive" ng-click="clearPosts()"> Clear </button>
+	</div>
     </ion-list>
   </ion-content>
 </ion-view>
