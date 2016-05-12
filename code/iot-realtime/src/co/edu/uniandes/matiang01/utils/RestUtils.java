@@ -17,6 +17,8 @@ public class RestUtils {
 		try {
 			OkHttpClient client = new OkHttpClient();
 			
+			System.out.println(predict);
+			
 			MediaType mediaType = MediaType.parse("application/json");
 			RequestBody body = RequestBody.create(mediaType, params);
 			Request request = new Request.Builder()
@@ -31,17 +33,16 @@ public class RestUtils {
 			Response response = client.newCall(request).execute();
 			resp =  response.body().string();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return resp.replace("[", "").replace("]", "");
 	}
 	
 	public static String call(String url, String msg) {
-System.out.println(msg);
 		String resp = "";
 		try {
+			System.out.println(url+msg);
 			OkHttpClient client = new OkHttpClient();
-			
 			Request request = new Request.Builder()
 			  .url(url+msg)
 			  .get()
@@ -53,7 +54,7 @@ System.out.println(msg);
 			Response response = client.newCall(request).execute();
 			resp =  response.body().string();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return resp.replace("[", "").replace("]", "");
 	}

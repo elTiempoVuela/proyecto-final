@@ -4243,3 +4243,1550 @@ Caused by: java.io.IOException: Protocol error
 	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
 	at org.h2.store.FileStore.write(FileStore.java:336)
 	... 19 more
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 log: flush
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:154)
+	at org.h2.store.PageLog.flushOut(PageLog.java:812)
+	at org.h2.store.PageLog.flush(PageLog.java:629)
+	at org.h2.store.PageStore.flushLog(PageStore.java:816)
+	at org.h2.engine.Database.flush(Database.java:1720)
+	at org.h2.store.WriterThread.run(WriterThread.java:85)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 13 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 10 more
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcBatchUpdateException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1098)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:141)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1080)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:213)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 24 more
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+05-10 03:48:48 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeQuery(Command.java:138)
+	at org.h2.jdbc.JdbcConnection.getInternalAutoCommit(JdbcConnection.java:396)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:388)
+	at org.wso2.carbon.ndatasource.rdbms.ConnectionRollbackOnReturnInterceptor.invoke(ConnectionRollbackOnReturnInterceptor.java:44)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:61)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.interceptor.ConnectionState.invoke(ConnectionState.java:153)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.TrapException.invoke(TrapException.java:41)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:80)
+	at com.sun.proxy.$Proxy16.close(Unknown Source)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.closeQuietly(JDBCReporter.java:416)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.reportGauges(JDBCReporter.java:221)
+	at org.wso2.carbon.metrics.reporter.JDBCReporter.report(JDBCReporter.java:181)
+	at com.codahale.metrics.ScheduledReporter.report(ScheduledReporter.java:162)
+	at com.codahale.metrics.ScheduledReporter$1.run(ScheduledReporter.java:117)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 35 more
+05-10 03:48:49 log: flush
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:154)
+	at org.h2.store.PageLog.flushOut(PageLog.java:812)
+	at org.h2.store.PageLog.flush(PageLog.java:629)
+	at org.h2.store.PageStore.flushLog(PageStore.java:816)
+	at org.h2.engine.Database.flush(Database.java:1720)
+	at org.h2.store.WriterThread.run(WriterThread.java:85)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 13 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 10 more
+05-10 03:48:49 log: flush
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:154)
+	at org.h2.store.PageLog.flushOut(PageLog.java:812)
+	at org.h2.store.PageLog.flush(PageLog.java:629)
+	at org.h2.store.PageStore.flushLog(PageStore.java:816)
+	at org.h2.engine.Database.flush(Database.java:1720)
+	at org.h2.store.WriterThread.run(WriterThread.java:85)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 13 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 10 more
+05-10 03:48:50 log: flush
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:154)
+	at org.h2.store.PageLog.flushOut(PageLog.java:812)
+	at org.h2.store.PageLog.flush(PageLog.java:629)
+	at org.h2.store.PageStore.flushLog(PageStore.java:816)
+	at org.h2.engine.Database.flush(Database.java:1720)
+	at org.h2.store.WriterThread.run(WriterThread.java:85)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 13 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 10 more
+05-10 03:48:50 log: flush
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:154)
+	at org.h2.store.PageLog.flushOut(PageLog.java:812)
+	at org.h2.store.PageLog.flush(PageLog.java:629)
+	at org.h2.store.PageStore.flushLog(PageStore.java:816)
+	at org.h2.engine.Database.flush(Database.java:1720)
+	at org.h2.store.WriterThread.run(WriterThread.java:85)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 13 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 10 more
+05-11 23:23:21 database: close
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.logAddOrRemoveRow(PageLog.java:602)
+	at org.h2.store.PageStore.logAddOrRemoveRow(PageStore.java:1235)
+	at org.h2.index.PageDataIndex.remove(PageDataIndex.java:337)
+	at org.h2.table.RegularTable.removeRow(RegularTable.java:331)
+	at org.h2.engine.Database.removeMeta(Database.java:732)
+	at org.h2.engine.Database.update(Database.java:1353)
+	at org.h2.schema.Sequence.flush(Sequence.java:128)
+	at org.h2.schema.Sequence.flushWithoutMargin(Sequence.java:106)
+	at org.h2.schema.Sequence.close(Sequence.java:144)
+	at org.h2.engine.Database.close(Database.java:1047)
+	at org.h2.engine.Database.removeSession(Database.java:959)
+	at org.h2.engine.Session.close(Session.java:579)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:317)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 29 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 26 more
+05-11 23:23:21 database: close
+org.h2.message.DbException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.checkpoint(PageLog.java:639)
+	at org.h2.store.PageStore.checkpoint(PageStore.java:373)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1124)
+	at org.h2.engine.Database.close(Database.java:1077)
+	at org.h2.engine.Database.removeSession(Database.java:959)
+	at org.h2.engine.Session.close(Session.java:579)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:317)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	... 23 more
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 20 more
+05-11 23:23:21 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: Protocol error"; "/home/ml/wso2ml-1.1.0/repository/database/WSO2METRICS_DB.h2.db" [90031-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.message.DbException.convertIOException(DbException.java:313)
+	at org.h2.store.FileStore.write(FileStore.java:338)
+	at org.h2.store.PageStore.writePage(PageStore.java:1141)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:105)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:146)
+	at org.h2.store.PageOutputStream.write(PageOutputStream.java:128)
+	at org.h2.store.PageLog.write(PageLog.java:498)
+	at org.h2.store.PageLog.commit(PageLog.java:518)
+	at org.h2.store.PageStore.commit(PageStore.java:1249)
+	at org.h2.engine.Database.commit(Database.java:1706)
+	at org.h2.engine.Session.commit(Session.java:468)
+	at org.h2.command.Command.stop(Command.java:168)
+	at org.h2.command.Command.executeUpdate(Command.java:244)
+	at org.h2.jdbc.JdbcConnection.rollbackInternal(JdbcConnection.java:1395)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:312)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.io.IOException: Protocol error
+	at java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:520)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:550)
+	at org.h2.store.FileStore.write(FileStore.java:336)
+	... 21 more

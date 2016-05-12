@@ -64,7 +64,6 @@ public class BoltPersistencia extends MongodbBolt {
 				
 				String adopta = RestUtils.call(predict,input,auth);
 				
-				
 				Log.info("mensaje json: "+content);	
 				if(content!= null){
 					DBObject mongoDoc = getMongoDocForInput(content);
